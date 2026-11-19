@@ -1,6 +1,6 @@
 # AGENTS.md — Normas y procedimientos del proyecto Digitalización 4.º ESO
 
-> **Versión de estas normas:** 1.4.0  
+> **Versión de estas normas:** 1.5.0  
 > **Última actualización:** 19/11/2026  
 > **Estado:** Documento vivo; revisar y ampliar cuando cambie el procedimiento.
 
@@ -239,6 +239,30 @@ Contenido complementario que no debe aparecer en las diapositivas.
 - La versión del Markdown puede evolucionar independientemente de la presentación cuando solo cambie una ampliación excluida. El manifiesto de presentación refleja la versión de la última generación, no necesariamente la del documento completo.
 - Una modificación del generador común puede requerir una **única regeneración de transición** para adoptar la nueva lógica, aunque no se cambie el temario visible. No atribuir esa transición a la inclusión de la ampliación.
 
+## 7 quater. Imágenes en diapositivas independientes
+
+Las carpetas `IMG/` existen en los 18 temas. Los archivos de imagen deben utilizar **nombres semánticos**, nunca números de diapositiva.
+
+Para añadir una diapositiva independiente de imagen, colocar un comentario HTML en el Markdown, **junto a la explicación asociada**:
+
+```markdown
+### Cómo funciona la CPU
+
+La CPU ejecuta instrucciones mediante circuitos.
+
+<!-- IMAGEN: IMG/funcionamiento-cpu.png | TITULO: Interior de una CPU | POSICION: DESPUES -->
+```
+
+- El generador reconoce `IMAGEN:` con ruta relativa dentro de `IMG/`; admite PNG, JPEG y WebP; `TITULO` y `POSICION` son opcionales.
+- `POSICION: DESPUES` (por defecto) termina primero las diapositivas de texto pendientes y agrega la imagen a continuación. `POSICION: ANTES` crea la diapositiva de imagen antes del texto pendiente en ese punto del documento.
+- Si se necesita una imagen **después de la segunda diapositiva de un apartado**, insertar la marca en el Markdown **tras el fragmento concreto que termina esa segunda unidad**. La posición se ancla al contenido, no al número global de diapositiva; no prometer posiciones numéricas fijas tras cambios del texto.
+- Cada imagen ocupa una diapositiva propia con título y ajuste de tamaño proporcional, tanto en HTML como en PPTX.
+- La imagen debe existir antes de generar; si no existe o la marca es inválida, informar del error y no afirmar que la presentación está actualizada.
+- La huella de origen incorpora los bytes de imágenes realmente referenciadas: al cambiar una imagen usada, se actualiza la presentación; una imagen no referenciada no debe obligar a regenerar.
+- Las imágenes de apartados excluidos mediante `PRESENTACION:EXCLUIR` no afectan a la generación.
+- Al dictar una solicitud por voz, preparar el recurso gráfico y asociarlo en el Markdown con su marca adecuada; el docente no tiene que escribirla. No generar ni insertar imágenes sin la petición correspondiente.
+- La modificación del generador común podría provocar una regeneración única de transición, incluso en temas sin imágenes. Evitarlo en las actualizaciones posteriores mediante huellas estables.
+
 ## 8. Flujo de trabajo para crear o actualizar un tema
 
 1. Leer `AGENTS.md`, `README.md` y los archivos existentes del tema.
@@ -287,3 +311,4 @@ Cuando se apruebe una nueva preferencia, añadirla a su sección correspondiente
 | 1.2.0 | 19/11/2026 | Registrar el workflow incremental ya operativo, su generador, manifiestos de versiones y la prueba automática del Tema 1. |
 | 1.3.0 | 19/11/2026 | Índices de ideas de vídeos para los 18 temas; guiones y actividades enlazados sin regeneración innecesaria de presentaciones. |
 | 1.4.0 | 19/11/2026 | Marcas HTML para excluir ampliaciones de HTML/PPTX y de la huella de cambios; inclusión automática al dictarlas por voz. |
+| 1.5.0 | 19/11/2026 | Marcas IMAGEN con posición relativa, diapositiva independiente, carpeta IMG y huellas de recursos. |

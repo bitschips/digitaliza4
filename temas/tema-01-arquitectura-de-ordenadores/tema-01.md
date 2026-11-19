@@ -25,6 +25,8 @@ Al finalizar este tema, el alumnado debería poder:
 
 Los ordenadores procesan información mediante señales digitales que se representan con dos valores: **0 y 1**. Cada valor se denomina **bit**. Un conjunto de ocho bits forma un **byte**, una unidad habitual para expresar el tamaño de los datos.
 
+<!-- IMAGEN: IMG/de-bits-a-gigabyte.svg | TITULO: Del bit al gigabyte | POSICION: DESPUES -->
+
 Los mismos bits pueden representar distintos tipos de información dependiendo de las reglas de codificación que se utilicen:
 
 - **Texto:** las letras y los símbolos se convierten en números mediante códigos como ASCII o Unicode.
@@ -186,6 +188,6 @@ Estas ideas son **ampliaciones opcionales**; no sustituyen los objetivos y conte
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.2.1
+- **Versión del contenido:** 1.3.0
 - **Última actualización:** 19/11/2026
 - **Estado:** Borrador ampliable

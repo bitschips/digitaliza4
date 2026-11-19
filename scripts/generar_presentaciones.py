@@ -319,7 +319,8 @@ def main() -> None:
         pptx_path = present / PPTX_NAME.format(number=num, slug=slug)
         signature = dict(source_sha256=digest, content_version=version,
                          updated_date=date, generator_sha256=SCRIPT_SHA)
-        skip = all(old.get(k) == v for k, v in signature.items()) and html_path.exists() and pptx_path.exists()
+        skip = (old.get("source_sha256") == digest and old.get("generator_sha256") == SCRIPT_SHA
+                and html_path.exists() and pptx_path.exists())
         if skip:
             status.append(f"OMITIDO tema {num:02d}: sin cambios didácticos")
             continue

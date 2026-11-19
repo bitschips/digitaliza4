@@ -5,6 +5,12 @@
 
 [Volver al índice general](../../README.md)
 
+## Materiales del tema
+
+- [Presentación PowerPoint — Tema 1](presentaciones/tema-01-arquitectura-de-ordenadores.pptx)
+- [Carpeta de presentaciones](presentaciones/)
+- [Carpeta de actividades](actividades/)
+
 ## Objetivos de aprendizaje
 
 Al finalizar este tema, el alumnado debería poder:

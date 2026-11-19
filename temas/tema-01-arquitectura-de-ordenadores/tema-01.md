@@ -162,6 +162,18 @@ Las diferencias no son absolutas: existen portátiles, tabletas con teclado y m�
 - **Periférico:** dispositivo que permite introducir, mostrar o intercambiar información.
 - **SoC:** chip que integra varios componentes de un sistema informático.
 
+## 8. Ampliación: ideas para profundizar
+
+Los siguientes contenidos son **propuestas complementarias, fuera del temario básico**. Se podrán desarrollar progresivamente mediante explicaciones visuales, vídeos cortos y, cuando proceda, actividades prácticas.
+
+1. **¿Qué ocurre cuando encendemos un ordenador?** Seguir el proceso de arranque: firmware BIOS/UEFI, carga del sistema operativo desde el almacenamiento a la RAM y trabajo inicial de la CPU.
+2. **¿Por qué un móvil puede ser tan potente como un ordenador?** Comparar CPU, SoC, núcleos, consumo de energía y refrigeración; analizar por qué la mayoría de los móviles no utilizan ventilador.
+3. **¿En qué se diferencian CPU, GPU y NPU?** Explicar de forma sencilla el procesamiento general, los cálculos paralelos y la aceleración especializada de tareas de inteligencia artificial.
+4. **El viaje de una línea de código por el ordenador.** Usar `print("Hola mundo")` para visualizar cómo intervienen SSD, RAM, intérprete de Python, CPU, transistores y salida en pantalla. [Idea y guion del vídeo](videos/video-01-viaje-linea-python.md) · [Actividad práctica: crear y ejecutar `hola.py`](actividades/actividad-01-hola-mundo-python.md).
+5. **¿Por qué los ordenadores son cada vez más rápidos?** Partir de la evolución histórica de los transistores para introducir la ley de Moore, la fabricación a escala nanométrica, los procesadores multinúcleo y los límites térmicos y energéticos. Aclarar que más transistores no implica necesariamente más velocidad.
+
+Estas ideas son **ampliaciones opcionales**; no sustituyen los objetivos y contenidos de los apartados anteriores. Se podrán desarrollar como futuros materiales en [Vídeos: índice de ideas](videos/README.md) y [Actividades](actividades/README.md).
+
 ---
 
 > **Nota docente:** documento ampliable. Las tablas históricas incluyen chips de distinta arquitectura, época y categoría; deben interpretarse como ilustración del crecimiento tecnológico, no como una comparación directa de rendimiento. Cada apartado se mantiene separado para facilitar su adaptación a una presentación PowerPoint.
@@ -170,6 +182,6 @@ Las diferencias no son absolutas: existen portátiles, tabletas con teclado y m�
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.1.0
+- **Versión del contenido:** 1.2.0
 - **Última actualización:** 19/11/2026
 - **Estado:** Borrador ampliable

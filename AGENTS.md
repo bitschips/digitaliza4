@@ -1,6 +1,6 @@
 # AGENTS.md — Normas y procedimientos del proyecto Digitalización 4.º ESO
 
-> **Versión de estas normas:** 1.2.0  
+> **Versión de estas normas:** 1.3.0  
 > **Última actualización:** 19/11/2026  
 > **Estado:** Documento vivo; revisar y ampliar cuando cambie el procedimiento.
 
@@ -18,7 +18,7 @@ La finalidad es mantener los contenidos **editables, reutilizables y preparados 
 
 1. **El Markdown es la fuente principal de contenido**: desarrollar, revisar y actualizar cada tema en su archivo `.md`.
 2. **Un único índice**: el archivo raíz `README.md` contiene los bloques y **solo los títulos de los temas**, con enlace al `.md` correspondiente cuando este exista. No duplicar allí los apartados del tema ni crear un segundo índice.
-3. **Cada tema es independiente**: su contenido, sus presentaciones y sus actividades están en su propia carpeta.
+3. **Cada tema es independiente**: su contenido, sus presentaciones, sus actividades y sus ideas de vídeos están en su propia carpeta.
 4. **Cambios mínimos**: no modificar temas o presentaciones no afectados por la tarea.
 5. **Materiales para alumnado de 4.º ESO**: lenguaje claro, progresivo, correcto y didáctico; definiciones comprensibles, ejemplos reales y pequeñas actividades.
 6. **Ampliación progresiva**: empezar con un documento útil y mejorarlo sin perder contenidos revisados anteriormente.
@@ -242,6 +242,17 @@ Actualmente **ya se utiliza** `presentaciones/manifest.json` en cada tema desarr
 - No se utiliza GitHub Pages.
 - No generar de nuevo el antiguo PDF ni el PowerPoint del índice principal.
 
+## 9 bis. Ideas de vídeos y actividades por tema
+
+- Cada uno de los **18 temas** incorpora `videos/README.md` como índice vivo de propuestas de vídeos para comprender visualmente conceptos del tema.
+- Cada idea se documenta por separado en `videos/video-NN-titulo.md`: objetivo didáctico, duración, conceptos, guion por escenas, narración, instrucciones para una futura herramienta de vídeo con IA, comprobación de exactitud, actividad asociada y estado.
+- **Registrar una idea o un guion no significa que el vídeo esté generado.** Los vídeos se generarán más adelante con la herramienta que se elija; solo publicar enlaces a vídeos comprobados.
+- Las actividades se documentan en `actividades/actividad-NN-titulo.md`, con pasos realizables en clase y criterios de logro; `actividades/README.md` recoge el índice del tema.
+- Una misma propuesta puede tener guion audiovisual y actividad práctica, enlazados entre sí. Ejemplo de Tema 1: viaje de `print("Hola mundo")` por SSD, RAM, CPU/transistores y pantalla, junto a la creación y ejecución de `hola.py`.
+- Al proponer nuevas actividades o vídeos por voz, crear el Markdown correspondiente y actualizar su índice **sin esperar que el docente pida expresamente crear el índice**.
+- **No modificar `tema-NN.md` ni regenerar HTML/PPTX solo por incorporar propuestas de vídeo o actividades separadas**, salvo que el docente pida incorporar también esos contenidos a las diapositivas o al material principal.
+- Mantener enlaces relativos Markdown para GitHub y `target="_blank" rel="noopener noreferrer"` en los enlaces de páginas HTML propias.
+
 ## 10. Cómo mejorar este documento
 
 Cuando se apruebe una nueva preferencia, añadirla a su sección correspondiente, actualizar **Versión de estas normas** y **Última actualización**, y conservar una explicación breve del cambio.
@@ -253,3 +264,4 @@ Cuando se apruebe una nueva preferencia, añadirla a su sección correspondiente
 | 1.0.0 | 19/11/2026 | Primer documento de normas: estructura de temas, enlaces, contenidos, HTML/PPTX, versiones y diseño de automatización incremental. |
 | 1.1.0 | 19/11/2026 | Sincronización obligatoria de presentaciones al añadir o modificar contenidos, incluso por voz y sin petición adicional; autorización para GitHub Actions. |
 | 1.2.0 | 19/11/2026 | Registrar el workflow incremental ya operativo, su generador, manifiestos de versiones y la prueba automática del Tema 1. |
+| 1.3.0 | 19/11/2026 | Índices de ideas de vídeos para los 18 temas; guiones y actividades enlazados sin regeneración innecesaria de presentaciones. |

@@ -8,7 +8,7 @@
 ## Materiales del tema
 
 - [Presentación — Tema 1](presentaciones/tema-01-arquitectura-de-ordenadores.pptx)
-- [Carpeta de actividades](actividades/)
+- [Actividades](actividades/)
 
 ## Objetivos de aprendizaje
 

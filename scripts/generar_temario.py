@@ -1,18 +1,11 @@
 #!/usr/bin/env python3
-"""Genera PDF imprimible y presentación PPTX desde Temario_Digitalizacion_4ESO.md."""
+"""Genera la presentación PPTX desde Temario_Digitalizacion_4ESO.md."""
 from pathlib import Path
 import re
-from xml.sax.saxutils import escape
-from reportlab.platypus import BaseDocTemplate, PageTemplate, Frame, Paragraph
-from reportlab.lib import colors
-from reportlab.lib.styles import ParagraphStyle
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.units import mm
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
-from pptx.enum.text import PP_ALIGN
 
 ROOT = Path(__file__).resolve().parents[1]
 STEM = "Temario_Digitalizacion_4ESO"
@@ -33,51 +26,6 @@ for line in md.splitlines():
         current_topic[2].append(line[2:])
 
 assert len(sections) == 4 and sum(len(sec[2]) for sec in sections) == 18
-
-# Índice imprimible en A4.
-navy = colors.HexColor("#132a45")
-blue = colors.HexColor("#1d5c8d")
-muted = colors.HexColor("#5a6978")
-ink = colors.HexColor("#23334b")
-P = ParagraphStyle("P", fontName="Helvetica-Bold", fontSize=18, leading=21, textColor=navy, spaceAfter=5)
-SUB = ParagraphStyle("SUB", fontName="Helvetica", fontSize=8.4, leading=11, textColor=muted, spaceAfter=9)
-BH = ParagraphStyle("BH", fontName="Helvetica-Bold", fontSize=11, leading=13, textColor=blue, spaceBefore=9, spaceAfter=2, keepWithNext=True)
-BT = ParagraphStyle("BT", fontName="Helvetica", fontSize=8.2, leading=10, textColor=muted, spaceAfter=6, keepWithNext=True)
-TH = ParagraphStyle("TH", fontName="Helvetica-Bold", fontSize=9.3, leading=11, textColor=navy, spaceBefore=3, spaceAfter=2, keepWithNext=True)
-BL = ParagraphStyle("BL", fontName="Helvetica", fontSize=8.35, leading=10.4, textColor=ink, leftIndent=9, firstLineIndent=-6, spaceAfter=1)
-NOTE = ParagraphStyle("NOTE", fontName="Helvetica-Oblique", fontSize=7.5, leading=9.5, textColor=muted, spaceBefore=6)
-
-class IndexDoc(BaseDocTemplate):
-    def __init__(self, name):
-        super().__init__(str(name), pagesize=A4, leftMargin=19*mm, rightMargin=19*mm, topMargin=21*mm, bottomMargin=17*mm)
-        width = A4[0]-38*mm
-        gap=10*mm
-        fr1=Frame(19*mm, 18*mm, (width-gap)/2, A4[1]-40*mm, id="L", leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)
-        fr2=Frame(19*mm+(width-gap)/2+gap, 18*mm, (width-gap)/2, A4[1]-40*mm, id="R", leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)
-        self.addPageTemplates(PageTemplate(id="index", frames=[fr1,fr2],onPage=self.draw_page))
-    def draw_page(self,c,doc):
-        c.saveState()
-        w,h=A4
-        c.setFillColor(navy); c.rect(0,h-9*mm,w,9*mm,stroke=0,fill=1)
-        c.setFont("Helvetica-Bold",8); c.setFillColor(colors.white)
-        c.drawString(19*mm,h-6.2*mm,"DIGITALIZACIÓN  ·  4.º ESO")
-        c.setStrokeColor(colors.HexColor("#dce6ee")); c.line(19*mm,14*mm,w-19*mm,14*mm)
-        c.setFont("Helvetica",7.5); c.setFillColor(muted)
-        c.drawString(19*mm,10*mm,"Propuesta de índice didáctico · Comunitat Valenciana · 2026-2027")
-        c.drawRightString(w-19*mm,10*mm,str(doc.page))
-        c.restoreState()
-
-story=[Paragraph("Digitalización — 4.º ESO",P),Paragraph("Comunitat Valenciana · GVA · Curso 2026-2027",SUB)]
-for label,desc,topics in sections:
-    story.extend([Paragraph(escape(label),BH),Paragraph(escape(desc),BT)])
-    for num,name,bullets in topics:
-        story.append(Paragraph(f"Tema {num}. {escape(name)}",TH))
-        story.extend([Paragraph("•  "+escape(b),BL) for b in bullets])
-story.extend([
-    Paragraph("Nota: los 18 temas son una propuesta didáctica resumida; no son una numeración oficial de la GVA.",NOTE),
-    Paragraph("Referencia: Decreto 107/2022 y modificaciones posteriores. Currículo de Digitalización (GVA).",NOTE)
-])
-IndexDoc(ROOT/(STEM+".pdf")).build(story)
 
 # PowerPoint 16:9, con siete diapositivas.
 prs=Presentation()
@@ -159,4 +107,4 @@ txt(s,"Decreto 107/2022 y modificaciones posteriores",7.13,5.32,5.1,0.78,17,True
 txt(s,"Los 18 temas son una propuesta didáctica, no una numeración oficial de la GVA.",7.13,6.13,5.08,0.5,11.5,False,MID)
 
 prs.save(ROOT/(STEM+".pptx"))
-print("Archivos generados")
+print("PowerPoint generado")

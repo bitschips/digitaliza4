@@ -186,6 +186,6 @@ Estas ideas son **ampliaciones opcionales**; no sustituyen los objetivos y conte
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.2.0
+- **Versión del contenido:** 1.2.1
 - **Última actualización:** 19/11/2026
 - **Estado:** Borrador ampliable

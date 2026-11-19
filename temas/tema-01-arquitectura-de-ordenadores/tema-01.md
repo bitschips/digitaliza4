@@ -40,6 +40,8 @@ Los mismos bits pueden representar distintos tipos de información dependiendo d
 
 ## 2. Hardware y componentes de un ordenador
 
+<!-- IMAGEN: IMG/componentes-ordenador.svg | TITULO: Componentes del ordenador | POSICION: DESPUES -->
+
 El **hardware** es el conjunto de componentes físicos de un dispositivo. El **software** es el conjunto de programas e instrucciones que permiten utilizarlo.
 
 | Componente | Función principal | Ejemplo de uso |
@@ -55,12 +57,16 @@ Los **periféricos de entrada** permiten introducir información (teclado, rató
 
 ### 2.1. ¿Cómo trabajan juntos?
 
+<!-- IMAGEN: IMG/recorrido-ssd-ram-cpu.svg | TITULO: Del SSD a la pantalla | POSICION: DESPUES -->
+
 Al abrir una aplicación, sus datos pasan normalmente del almacenamiento a la memoria RAM. La CPU ejecuta sus instrucciones y, cuando es necesario mostrar imágenes, interviene la GPU. El sistema operativo coordina el uso de estos recursos.
 
 **Idea clave:** la RAM es temporal; el almacenamiento conserva los archivos. No cumplen la misma función.
 
 
 ### 2.2. El transistor: la pieza básica de las CPU y GPU
+
+<!-- IMAGEN: IMG/transistor-interruptor.svg | TITULO: El transistor como interruptor | POSICION: DESPUES -->
 
 Un **transistor** es un componente electrónico diminuto fabricado con material semiconductor, normalmente **silicio**. Se puede utilizar como un **interruptor electrónico** que deja pasar o interrumpe una corriente según la señal que recibe. Esta idea sirve para explicar, de forma sencilla, cómo funcionan los circuitos digitales.
 
@@ -71,6 +77,8 @@ Un **transistor** es un componente electrónico diminuto fabricado con material 
 **Ejemplo para clase:** imagina muchos interruptores minúsculos que se conectan entre sí. Con ellos se pueden construir circuitos capaces de sumar números y tomar decisiones sencillas.
 
 #### Evolución del número de transistores en procesadores y SoC
+
+<!-- IMAGEN: IMG/miniaturizacion-transistores.svg | TITULO: Miniaturización de los transistores | POSICION: DESPUES -->
 
 | Año | Procesador | Transistores aproximados | Tipo |
 |---|---|---:|---|
@@ -85,6 +93,8 @@ Un **transistor** es un componente electrónico diminuto fabricado con material 
 **Importante:** los Apple M1 y M4 son **sistemas en chip (SoC)**. El recuento incluye CPU, GPU y otros componentes integrados; por tanto, no es exactamente comparable con los procesadores Intel clásicos.
 
 #### Evolución de los chips gráficos y de IA de NVIDIA
+
+<!-- IMAGEN: IMG/evolucion-transistores.svg | TITULO: Evolución histórica de los transistores | POSICION: DESPUES -->
 
 | Año | Chip NVIDIA | Transistores aproximados | Uso destacado |
 |---|---|---:|---|
@@ -188,6 +198,6 @@ Estas ideas son **ampliaciones opcionales**; no sustituyen los objetivos y conte
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.3.0
+- **Versión del contenido:** 1.4.0
 - **Última actualización:** 19/11/2026
 - **Estado:** Borrador ampliable

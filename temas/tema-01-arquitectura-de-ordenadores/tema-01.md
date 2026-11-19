@@ -57,6 +57,49 @@ Al abrir una aplicación, sus datos pasan normalmente del almacenamiento a la me
 
 **Idea clave:** la RAM es temporal; el almacenamiento conserva los archivos. No cumplen la misma función.
 
+
+### 2.2. El transistor: la pieza básica de las CPU y GPU
+
+Un **transistor** es un componente electrónico diminuto fabricado con material semiconductor, normalmente **silicio**. Se puede utilizar como un **interruptor electrónico** que deja pasar o interrumpe una corriente según la señal que recibe. Esta idea sirve para explicar, de forma sencilla, cómo funcionan los circuitos digitales.
+
+- **0 y 1:** los circuitos representan estos valores mediante niveles eléctricos. *Un transistor no equivale por sí solo a un bit*: se combinan muchos transistores para construir circuitos más complejos.
+- **Puertas lógicas:** al combinar transistores obtenemos circuitos que realizan operaciones como AND, OR y NOT.
+- **CPU y GPU:** integran enormes cantidades de transistores para realizar cálculos, almacenar información temporal y controlar distintas operaciones.
+
+**Ejemplo para clase:** imagina muchos interruptores minúsculos que se conectan entre sí. Con ellos se pueden construir circuitos capaces de sumar números y tomar decisiones sencillas.
+
+#### Evolución del número de transistores en procesadores y SoC
+
+| Año | Procesador | Transistores aproximados | Tipo |
+|---|---|---:|---|
+| 1971 | Intel 4004 | 2.300 | CPU |
+| 1978 | Intel 8086 | 29.000 | CPU |
+| 1993 | Intel Pentium | 3,1 millones | CPU |
+| 2000 | Intel Pentium 4 | 42 millones | CPU |
+| 2006 | Intel Core 2 Duo | 291 millones | CPU |
+| 2020 | Apple M1 | 16.000 millones | SoC |
+| 2024 | Apple M4 | 28.000 millones | SoC |
+
+**Importante:** los Apple M1 y M4 son **sistemas en chip (SoC)**. El recuento incluye CPU, GPU y otros componentes integrados; por tanto, no es exactamente comparable con los procesadores Intel clásicos.
+
+#### Evolución de los chips gráficos y de IA de NVIDIA
+
+| Año | Chip NVIDIA | Transistores aproximados | Uso destacado |
+|---|---|---:|---|
+| 1999 | GeForce 256 | 23 millones | Gráficos 3D |
+| 2006 | GeForce 8800 GTX | 681 millones | Videojuegos y gráficos |
+| 2016 | GeForce GTX 1080 | 7.200 millones | Gráficos y realidad virtual |
+| 2022 | GeForce RTX 4090 | 76.300 millones | Gráficos y cálculos de IA |
+| 2024 | NVIDIA Blackwell B200 | 208.000 millones | Aceleración de inteligencia artificial |
+
+En Blackwell B200 se contabilizan los transistores de **dos bloques de silicio (dies)** conectados para funcionar como una GPU. No es un único bloque monolítico.
+
+Este crecimiento recuerda a la **ley de Moore**, una observación histórica sobre el aumento de transistores en los chips. No es una ley física que garantice duplicaciones indefinidas. Además, **más transistores no significa necesariamente más velocidad**: también influyen el diseño, el consumo energético, la memoria y la refrigeración.
+
+**Actividad rápida:** ¿cuántas veces más transistores tiene el Intel 8086 que el 4004? ¿Por qué no sería justo comparar directamente el Apple M4 con el Intel 4004 o el NVIDIA B200?
+
+**Fuentes de los datos históricos:** [Intel, historia del 4004](https://www.intel.com/pressroom/archive/releases/2001/20011115corp_a.htm), [Intel, 8086](https://www.intel.com/pressroom/archive/releases/2003/20030609corp.htm), [Intel, referencia de microprocesadores](https://www.intel.com/pressroom/kits/quickreffam.htm), [Intel, Core 2 Duo](https://www.intel.com/pressroom/archive/releases/2006/20060727comp.htm), [Apple M1](https://www.apple.com/uk/newsroom/2020/11/apple-unleashes-m1/), [Apple M4](https://www.apple.com/newsroom/2024/05/apple-introduces-m4-chip/), [NVIDIA, GeForce 256](https://download.nvidia.com/developer/cg/Cg_Tutorial/Chapter_1.pdf), [NVIDIA, GTX 1080](https://www.nvidia.com/en-us/geforce/news/geforce-gtx-1080-gaming-perfected/), [NVIDIA, RTX 4090](https://images.nvidia.com/aem-dam/Solutions/Data-Center/l4/nvidia-ada-gpu-architecture-whitepaper-V2.02.pdf), [NVIDIA Blackwell](https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Blackwell-Platform-Arrives-to-Power-a-New-Era-of-Computing/). El valor de la GeForce 8800 GTX procede de una tabla histórica en los [foros técnicos de NVIDIA](https://forums.developer.nvidia.com/t/gpu-vs-cpu-comparison-over-the-last-years/13097).
+
 ## 3. Montaje, configuración y rendimiento
 
 Montar un ordenador implica elegir componentes compatibles, conectarlos correctamente y comprobar su funcionamiento. En un PC de sobremesa se pueden identificar la placa base, la CPU, los módulos de RAM, la unidad SSD y las conexiones de alimentación.
@@ -121,12 +164,12 @@ Las diferencias no son absolutas: existen portátiles, tabletas con teclado y m�
 
 ---
 
-> **Nota docente:** documento base para ampliar con imágenes, ejemplos reales, ejercicios y futuras diapositivas. Cada apartado se mantiene separado para facilitar su adaptación a una presentación PowerPoint.
+> **Nota docente:** documento ampliable. Las tablas históricas incluyen chips de distinta arquitectura, época y categoría; deben interpretarse como ilustración del crecimiento tecnológico, no como una comparación directa de rendimiento. Cada apartado se mantiene separado para facilitar su adaptación a una presentación PowerPoint.
 
 ---
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.0.0
+- **Versión del contenido:** 1.1.0
 - **Última actualización:** 19/11/2026
 - **Estado:** Borrador ampliable

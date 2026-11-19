@@ -1,6 +1,6 @@
 # AGENTS.md — Normas y procedimientos del proyecto Digitalización 4.º ESO
 
-> **Versión de estas normas:** 1.3.0  
+> **Versión de estas normas:** 1.4.0  
 > **Última actualización:** 19/11/2026  
 > **Estado:** Documento vivo; revisar y ampliar cuando cambie el procedimiento.
 
@@ -218,13 +218,34 @@ Actualmente **ya se utiliza** `presentaciones/manifest.json` en cada tema desarr
 
 ---
 
+## 7 ter. Exclusión de secciones opcionales de las presentaciones
+
+**Regla aprobada:** los contenidos de ampliación pueden conservarse en el Markdown del tema sin incorporarse a HTML/PPTX. Rodear los apartados opcionales con comentarios HTML exactos:
+
+```markdown
+<!-- PRESENTACION:EXCLUIR -->
+
+## 8. Ampliación
+
+Contenido complementario que no debe aparecer en las diapositivas.
+
+<!-- PRESENTACION:FIN_EXCLUSION -->
+```
+
+- El generador `scripts/generar_presentaciones.py` elimina los bloques marcados **antes** de calcular la huella SHA-256 y de crear las diapositivas. Si se altera únicamente un bloque excluido, no se regeneran HTML/PPTX. Se pueden excluir apartados en cualquier lugar del archivo.
+- Si se añade o corrige contenido dentro de una ampliación excluida, mantenerlo dentro de las marcas; **no quitar las marcas sin una petición expresa de incluir ese contenido en la presentación**.
+- Cuando el profesor dicte por voz «añade una ampliación», colocar automáticamente las marcas; no pedirle que recuerde la sintaxis. Si pide pasar una ampliación a las diapositivas, eliminar las marcas alrededor de esa sección.
+- Las dos marcas deben estar equilibradas y no anidadas; un error debe detener el proceso en lugar de producir una presentación incompleta.
+- La versión del Markdown puede evolucionar independientemente de la presentación cuando solo cambie una ampliación excluida. El manifiesto de presentación refleja la versión de la última generación, no necesariamente la del documento completo.
+- Una modificación del generador común puede requerir una **única regeneración de transición** para adoptar la nueva lógica, aunque no se cambie el temario visible. No atribuir esa transición a la inclusión de la ampliación.
+
 ## 8. Flujo de trabajo para crear o actualizar un tema
 
 1. Leer `AGENTS.md`, `README.md` y los archivos existentes del tema.
 2. Aclarar qué contenido o actividad se desea ampliar o corregir. Si la instrucción es suficiente, actuar sin solicitar confirmaciones innecesarias.
 3. Editar primero el archivo `tema-NN.md`, conservando enlaces y estructura.
 4. Incrementar su versión de forma proporcionada y actualizar la fecha.
-5. **Siempre que se modifica el contenido pedagógico, generar o actualizar automáticamente HTML y PPTX**, aunque no se solicite de manera expresa. Sincronizar versión, fecha y huella. Respetar pestañas nuevas en HTML.
+5. **Siempre que se modifica el contenido pedagógico destinado a diapositivas, generar o actualizar automáticamente HTML y PPTX**, aunque no se solicite de manera expresa. Sincronizar versión, fecha y huella. Respetar pestañas nuevas en HTML.
 6. Si se solicita actividad, guardarla en `actividades/` y añadir un enlace no redundante desde el tema.
 7. Actualizar el enlace del `README.md` **solo cuando se cree el contenido de un tema que antes no existía** o cambie su ruta.
 8. Comprobar las rutas y visualizar/verificar los resultados en la medida que permitan las herramientas.
@@ -265,3 +286,4 @@ Cuando se apruebe una nueva preferencia, añadirla a su sección correspondiente
 | 1.1.0 | 19/11/2026 | Sincronización obligatoria de presentaciones al añadir o modificar contenidos, incluso por voz y sin petición adicional; autorización para GitHub Actions. |
 | 1.2.0 | 19/11/2026 | Registrar el workflow incremental ya operativo, su generador, manifiestos de versiones y la prueba automática del Tema 1. |
 | 1.3.0 | 19/11/2026 | Índices de ideas de vídeos para los 18 temas; guiones y actividades enlazados sin regeneración innecesaria de presentaciones. |
+| 1.4.0 | 19/11/2026 | Marcas HTML para excluir ampliaciones de HTML/PPTX y de la huella de cambios; inclusión automática al dictarlas por voz. |

@@ -12,9 +12,11 @@ import json
 import re
 from datetime import datetime
 from pathlib import Path
+from io import BytesIO
 from zoneinfo import ZoneInfo
 
 import markdown
+import cairosvg
 from bs4 import BeautifulSoup, Tag, Comment
 from pptx import Presentation
 from pptx.dml.color import RGBColor
@@ -57,7 +59,7 @@ def source_content(text: str) -> str:
 
 
 IMAGE_MARK_RE = re.compile(
-    r"^IMAGEN:\s*(IMG/[a-zA-Z0-9_.-]+\.(?:png|jpg|jpeg|webp))"
+    r"^IMAGEN:\s*(IMG/[a-zA-Z0-9_.-]+\.(?:png|jpg|jpeg|webp|svg))"
     r"(?:\s*\|\s*TITULO:\s*([^|]+?))?"
     r"(?:\s*\|\s*POSICION:\s*(ANTES|DESPUES))?\s*$", re.IGNORECASE,
 )
@@ -203,7 +205,11 @@ def write_pptx(path: Path, slides: list[dict], version: str, date: str, digest: 
                       color=COLORS["white"])
         elif data["kind"] == "image":
             image_path = path.parent.parent / data["image"]
-            picture = slide.shapes.add_picture(str(image_path), Inches(0), Inches(0))
+            if image_path.suffix.lower() == ".svg":
+                raster = BytesIO(cairosvg.svg2png(url=str(image_path), output_width=2400))
+                picture = slide.shapes.add_picture(raster, Inches(0), Inches(0))
+            else:
+                picture = slide.shapes.add_picture(str(image_path), Inches(0), Inches(0))
             max_w, max_h = Inches(11.35), Inches(4.7)
             ratio = min(max_w / picture.width, max_h / picture.height)
             picture.width = int(picture.width * ratio)

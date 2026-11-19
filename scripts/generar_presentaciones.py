@@ -33,8 +33,24 @@ MAX_ITEMS = 4
 MAX_TABLE_ROWS = 7
 
 
+EXCLUDE_OPEN = "<!-- PRESENTACION:EXCLUIR -->"
+EXCLUDE_CLOSE = "<!-- PRESENTACION:FIN_EXCLUSION -->"
+
+
+def remove_excluded_blocks(text: str) -> str:
+    """Elimina bloques optativos antes de calcular huellas y generar diapositivas."""
+    if text.count(EXCLUDE_OPEN) != text.count(EXCLUDE_CLOSE):
+        raise ValueError("Bloque PRESENTACION sin pareja de marcas EXCLUIR/FIN_EXCLUSION")
+    pattern = re.compile(re.escape(EXCLUDE_OPEN) + r".*?" + re.escape(EXCLUDE_CLOSE), re.DOTALL)
+    filtered = pattern.sub("", text)
+    if EXCLUDE_OPEN in filtered or EXCLUDE_CLOSE in filtered:
+        raise ValueError("Marcas PRESENTACION inválidas o anidadas")
+    return filtered
+
+
 def source_content(text: str) -> str:
-    """No se incluyen metadatos ni enlaces de navegación en la huella didáctica."""
+    """Contenido que realmente aparece en diapositivas, sin bloques excluidos."""
+    text = remove_excluded_blocks(text)
     if "## Objetivos de aprendizaje" in text:
         text = "## Objetivos de aprendizaje" + text.split("## Objetivos de aprendizaje", 1)[1]
     return text.split("## Control de versiones", 1)[0].split("\n---\n\n> **Nota docente:**", 1)[0].strip()

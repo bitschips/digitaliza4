@@ -15,7 +15,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import markdown
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup, Tag, Comment
 from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
@@ -56,6 +56,29 @@ def source_content(text: str) -> str:
     return text.split("## Control de versiones", 1)[0].split("\n---\n\n> **Nota docente:**", 1)[0].strip()
 
 
+IMAGE_MARK_RE = re.compile(
+    r"^IMAGEN:\s*(IMG/[a-zA-Z0-9_.-]+\.(?:png|jpg|jpeg|webp))"
+    r"(?:\s*\|\s*TITULO:\s*([^|]+?))?"
+    r"(?:\s*\|\s*POSICION:\s*(ANTES|DESPUES))?\s*$", re.IGNORECASE,
+)
+
+
+def presentation_digest(text: str, folder: Path) -> str:
+    """Incluye solamente los recursos de imagen enlazados en la fuente visible."""
+    h = hashlib.sha256(text.encode("utf-8"))
+    for marker in re.findall(r"<!--\s*(IMAGEN:.*?)\s*-->", text, re.DOTALL):
+        match = IMAGE_MARK_RE.fullmatch(marker.strip())
+        if not match:
+            raise ValueError(f"Marca IMAGEN inválida: {marker[:120]}")
+        relative = match.group(1)
+        picture = folder / relative
+        if not picture.is_file():
+            raise FileNotFoundError(f"Falta imagen: {picture}")
+        h.update(relative.encode("utf-8"))
+        h.update(hashlib.sha256(picture.read_bytes()).digest())
+    return h.hexdigest()
+
+
 def clean(text: str) -> str:
     return " ".join(text.split()).strip()
 
@@ -92,6 +115,20 @@ def parse_slides(text: str, number: int, title: str) -> list[dict]:
             items.append(value)
 
     for element in soup.children:
+        if isinstance(element, Comment):
+            comment = str(element).strip()
+            if comment.startswith("IMAGEN:"):
+                match = IMAGE_MARK_RE.fullmatch(comment)
+                if not match:
+                    raise ValueError(f"Marca IMAGEN inválida: {comment[:120]}")
+                rel, label, placement = match.group(1), match.group(2), match.group(3)
+                picture = {"title": clean(label or heading), "kind": "image", "image": rel}
+                # Una marca se coloca en el punto exacto del texto al que pertenece.
+                # ANTES la sitúa antes del texto pendiente; DESPUES cierra primero ese texto.
+                if (placement or "DESPUES").upper() == "DESPUES":
+                    flush()
+                slides.append(picture)
+            continue
         if not isinstance(element, Tag):
             continue
         if element.name in ("h2", "h3", "h4"):
@@ -164,6 +201,15 @@ def write_pptx(path: Path, slides: list[dict], version: str, date: str, digest: 
                       color=COLORS["white"])
             pptx_text(slide, "Material didáctico · fuente: tema en Markdown", .75, 5.55, 11.4, .5, 17,
                       color=COLORS["white"])
+        elif data["kind"] == "image":
+            image_path = path.parent.parent / data["image"]
+            picture = slide.shapes.add_picture(str(image_path), Inches(0), Inches(0))
+            max_w, max_h = Inches(11.35), Inches(4.7)
+            ratio = min(max_w / picture.width, max_h / picture.height)
+            picture.width = int(picture.width * ratio)
+            picture.height = int(picture.height * ratio)
+            picture.left = int((prs.slide_width - picture.width) / 2)
+            picture.top = Inches(2.0) + int((max_h - picture.height) / 2)
         elif data["kind"] == "table":
             heads, rows = data["heads"], data["rows"]
             cols = len(heads)
@@ -207,7 +253,7 @@ a{color:#0c7183}.stage{box-shadow:0 18px 45px #123c5233;border-radius:18px;overf
 .slide.cover[hidden]{display:none}.tag{font-size:.83rem;color:#0b8190;font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin:0 0 14px}.cover .tag{color:#a9f4ef}
 h1{font-size:clamp(2.1rem,5vw,4rem);line-height:1.1;letter-spacing:-.035em;max-width:1050px}h2{font-size:clamp(1.45rem,3.7vw,2.65rem);margin:.2rem 0 1.5rem;line-height:1.15;color:#12314b}
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:#fff;border:1px solid #d8e7ed;border-radius:15px;padding:clamp(1rem,2vw,1.6rem);min-height:130px;font-size:clamp(1rem,1.35vw,1.19rem);line-height:1.5;overflow-wrap:anywhere}
-.card::first-letter{color:#0c8397}.table-wrap{max-width:100%;overflow-x:auto;background:white;border-radius:14px}
+.card::first-letter{color:#0c8397}.image-frame{display:flex;align-items:center;justify-content:center;min-height:46vh}.image-frame img{display:block;max-width:100%;max-height:58vh;width:auto;height:auto;object-fit:contain;border-radius:12px}.table-wrap{max-width:100%;overflow-x:auto;background:white;border-radius:14px}
 table{width:100%;border-collapse:collapse;min-width:560px}th,td{padding:12px 15px;border-bottom:1px solid #dde9ee;text-align:left;vertical-align:top;font-size:clamp(.88rem,1.2vw,1.1rem)}
 th{background:#0b7e93;color:white}tr:nth-child(odd) td{background:#f3f8fb}
 .controls{background:white;display:flex;gap:9px;flex-wrap:wrap;padding:15px;align-items:center}.controls button,.controls select{border:1px solid #bfd4df;background:#eff6f9;border-radius:9px;padding:10px 13px;font-weight:700;color:#153d57;font:inherit}
@@ -231,6 +277,9 @@ def write_html(path: Path, slides: list[dict], version: str, date: str, digest: 
         inner += f'<h1>{title}</h1>' if index == 0 else f'<h2>{title}</h2>'
         if slide["kind"] == "cover":
             inner += '<p class="subtitle">Aprende explorando los componentes y sus funciones</p>'
+        elif slide["kind"] == "image":
+            src = "../" + slide["image"]
+            inner += f'<div class="image-frame"><img src="{html.escape(src, quote=True)}" alt="{title}"></div>'
         elif slide["kind"] == "table":
             heads = "".join(f"<th>{html.escape(v)}</th>" for v in slide["heads"])
             rows = "".join("<tr>" + "".join(f"<td>{html.escape(x)}</td>" for x in row) + "</tr>"
@@ -294,7 +343,7 @@ def main() -> None:
         old = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
         markdown_text = source.read_text(encoding="utf-8")
         content = source_content(markdown_text)
-        digest = hashlib.sha256(content.encode("utf-8")).hexdigest()
+        digest = presentation_digest(content, folder)
         match = re.search(r"tema-(\d+)-(.+)", folder.name)
         if not match:
             continue

@@ -162,6 +162,8 @@ Las diferencias no son absolutas: existen portátiles, tabletas con teclado y m�
 - **Periférico:** dispositivo que permite introducir, mostrar o intercambiar información.
 - **SoC:** chip que integra varios componentes de un sistema informático.
 
+<!-- PRESENTACION:EXCLUIR -->
+
 ## 8. Ampliación: ideas para profundizar
 
 Los siguientes contenidos son **propuestas complementarias, fuera del temario básico**. Se podrán desarrollar progresivamente mediante explicaciones visuales, vídeos cortos y, cuando proceda, actividades prácticas.
@@ -173,6 +175,8 @@ Los siguientes contenidos son **propuestas complementarias, fuera del temario b�
 5. **¿Por qué los ordenadores son cada vez más rápidos?** Partir de la evolución histórica de los transistores para introducir la ley de Moore, la fabricación a escala nanométrica, los procesadores multinúcleo y los límites térmicos y energéticos. Aclarar que más transistores no implica necesariamente más velocidad.
 
 Estas ideas son **ampliaciones opcionales**; no sustituyen los objetivos y contenidos de los apartados anteriores. Se podrán desarrollar como futuros materiales en [Vídeos: índice de ideas](videos/README.md) y [Actividades](actividades/README.md).
+
+<!-- PRESENTACION:FIN_EXCLUSION -->
 
 ---
 

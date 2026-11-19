@@ -122,3 +122,11 @@ Las diferencias no son absolutas: existen portátiles, tabletas con teclado y m�
 ---
 
 > **Nota docente:** documento base para ampliar con imágenes, ejemplos reales, ejercicios y futuras diapositivas. Cada apartado se mantiene separado para facilitar su adaptación a una presentación PowerPoint.
+
+---
+
+## Control de versiones
+
+- **Versión del contenido:** 1.0.0
+- **Última actualización:** 19/11/2026
+- **Estado:** Borrador ampliable

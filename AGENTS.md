@@ -1,6 +1,6 @@
 # AGENTS.md — Normas y procedimientos del proyecto Digitalización 4.º ESO
 
-> **Versión de estas normas:** 1.1.0  
+> **Versión de estas normas:** 1.2.0  
 > **Última actualización:** 19/11/2026  
 > **Estado:** Documento vivo; revisar y ampliar cuando cambie el procedimiento.
 
@@ -153,11 +153,18 @@ Ejemplo de visor para el Tema 1:
 
 Alojar un HTML **como archivo en GitHub** no equivale a publicarlo como sitio web nativo; la vista de diapositivas se obtiene aquí mediante un visor externo. Si el visor deja de funcionar, buscar una alternativa y comentarla antes de cambiar la arquitectura.
 
-## 7. Automatización futura con GitHub Actions
+## 7. Automatización incremental con GitHub Actions
 
-**Objetivo acordado:** cuando cambie el contenido de un tema, regenerar **solo las presentaciones desactualizadas**, no todo el repositorio.
+**Sistema activo y comprobado:** cuando cambie el contenido de un tema, regenerar **solo las presentaciones desactualizadas**, no todo el repositorio.
 
-La automatización incremental **todavía no está configurada** de forma general. Estas son las especificaciones para desarrollarla cuando se solicite:
+- **Workflow:** `.github/workflows/actualizar-presentaciones.yml`.
+- **Generador reutilizable:** `scripts/generar_presentaciones.py` (Python, `markdown`, `beautifulsoup4`, `python-pptx`).
+- **Manifest por tema:** `temas/tema-NN-.../presentaciones/manifest.json`, con SHA-256, versión del contenido, fecha, versión del generador, número de diapositivas y nombres de salidas.
+- **Activación:** en cada push que afecte a `temas/**/tema-*.md`, imágenes admitidas, generador, o el propio workflow; también admite ejecución manual.
+- **Sin IA externa:** la Action transforma el Markdown en diapositivas por reglas predefinidas. Para una transformación editorial distinta o visuales elaborados, el profesor puede solicitar una mejora del generador o un diseño específico.
+- **Última prueba:** el Tema 1 pasó automáticamente de v1.0.0 (21 diapositivas) a v1.1.0 (28 diapositivas) tras añadir el contenido de transistores.
+
+El procedimiento que se debe conservar en las futuras revisiones es:
 
 1. **Evento de entrada:** cambios en archivos `tema-NN.md`, recursos de los temas, plantillas o generadores; opcionalmente ejecución manual (`workflow_dispatch`).
 2. **Identificar temas afectados** por las rutas modificadas. No actualizar presentaciones de temas que no hayan cambiado.
@@ -180,7 +187,7 @@ La automatización incremental **todavía no está configurada** de forma genera
 
 **Importante:** los números anteriores son ejemplos de funcionamiento, no el estado real de los temas 2 o 3.
 
-Para facilitar las comparaciones, una implementación futura puede mantener un manifiesto generado (por ejemplo, `presentaciones/manifest.json` o un registro común) con versión, fecha, huella de origen, versión del generador y rutas de salida. No es necesario crear ese manifiesto antes de desarrollar la automatización.
+Actualmente **ya se utiliza** `presentaciones/manifest.json` en cada tema desarrollado. Mantener esta estructura para que el generador incremental pueda comparar cambios sin depender solo de la versión manual.
 
 ## 7 bis. SINCRONIZACIÓN AUTOMÁTICA OBLIGATORIA (prioridad alta)
 
@@ -227,11 +234,11 @@ Para facilitar las comparaciones, una implementación futura puede mantener un m
 
 - `README.md`: índice principal simplificado, con título y enlace al contenido del Tema 1.
 - Carpetas de **18 temas** y sus subcarpetas `presentaciones/` y `actividades/`: creadas.
-- `tema-01.md`: desarrollado en versión inicial **1.0.0**, con control de versión al final.
-- `tema-01.html`: presentación HTML inicial con metadatos de versión **1.0.0**.
-- `tema-01-arquitectura-de-ordenadores.pptx`: presentación editable inicial, versión **1.0.0**.
+- `tema-01.md`: ampliado con transistores y evolución histórica CPU/NVIDIA, versión **1.1.0**, con control de versión al final.
+- `tema-01.html`: presentación HTML generada automáticamente, versión **1.1.0**.
+- `tema-01-arquitectura-de-ordenadores.pptx`: presentación editable generada automáticamente, versión **1.1.0**.
 - Los **temas 2–18 aún no tienen contenido de tema desarrollado**.
-- No existe un flujo común y permanente de regeneración incremental de todos los temas.
+- El flujo común de regeneración incremental ya está activo: `.github/workflows/actualizar-presentaciones.yml`. La modificación del Tema 1 disparó la Action, que publicó ambas presentaciones en versión **1.1.0**.
 - No se utiliza GitHub Pages.
 - No generar de nuevo el antiguo PDF ni el PowerPoint del índice principal.
 
@@ -245,3 +252,4 @@ Cuando se apruebe una nueva preferencia, añadirla a su sección correspondiente
 |---|---|---|
 | 1.0.0 | 19/11/2026 | Primer documento de normas: estructura de temas, enlaces, contenidos, HTML/PPTX, versiones y diseño de automatización incremental. |
 | 1.1.0 | 19/11/2026 | Sincronización obligatoria de presentaciones al añadir o modificar contenidos, incluso por voz y sin petición adicional; autorización para GitHub Actions. |
+| 1.2.0 | 19/11/2026 | Registrar el workflow incremental ya operativo, su generador, manifiestos de versiones y la prueba automática del Tema 1. |

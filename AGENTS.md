@@ -1,6 +1,6 @@
 # AGENTS.md — Normas y procedimientos del proyecto Digitalización 4.º ESO
 
-> **Versión de estas normas:** 1.0.0  
+> **Versión de estas normas:** 1.1.0  
 > **Última actualización:** 19/11/2026  
 > **Estado:** Documento vivo; revisar y ampliar cuando cambie el procedimiento.
 
@@ -23,7 +23,7 @@ La finalidad es mantener los contenidos **editables, reutilizables y preparados 
 5. **Materiales para alumnado de 4.º ESO**: lenguaje claro, progresivo, correcto y didáctico; definiciones comprensibles, ejemplos reales y pequeñas actividades.
 6. **Ampliación progresiva**: empezar con un documento útil y mejorarlo sin perder contenidos revisados anteriormente.
 7. **No crear materiales duplicados ni archivos innecesarios**. No generar PDF ni una presentación general del índice, salvo petición explícita.
-8. No activar nuevas automatizaciones, GitHub Pages ni servicios externos sin necesidad o autorización expresa.
+8. Se autoriza **GitHub Actions exclusivamente para mantener sincronizadas las presentaciones HTML/PPTX con sus temas Markdown**. No activar GitHub Pages ni servicios externos adicionales sin autorización.
 
 ## 3. Estructura del repositorio
 
@@ -182,13 +182,42 @@ La automatización incremental **todavía no está configurada** de forma genera
 
 Para facilitar las comparaciones, una implementación futura puede mantener un manifiesto generado (por ejemplo, `presentaciones/manifest.json` o un registro común) con versión, fecha, huella de origen, versión del generador y rutas de salida. No es necesario crear ese manifiesto antes de desarrollar la automatización.
 
+## 7 bis. SINCRONIZACIÓN AUTOMÁTICA OBLIGATORIA (prioridad alta)
+
+**Regla central: una petición de «añade/corrige/modifica este punto en el Tema N» incluye implícitamente actualizar sus presentaciones HTML y PPTX. El docente NO tiene que solicitar «actualiza la presentación».** Aplica incluso si el cambio se dicta por voz o es una sola línea.
+
+### Cuando la modificación se hace hablando con ChatGPT
+
+1. Leer `AGENTS.md` y localizar `tema-NN.md` y sus recursos existentes.
+2. Incorporar la idea en la sección apropiada, manteniendo el nivel didáctico y los contenidos anteriores.
+3. Incrementar la versión del tema y actualizar su fecha; si el cambio es pequeño, incrementar PATCH; si añade un apartado, MINOR.
+4. Guardar y comprobar el Markdown. **No dar por finalizado el encargo mientras no se haya iniciado/completado correctamente la sincronización de HTML/PPTX**, según permita el acceso al repositorio.
+5. Si está configurado el flujo de GitHub Actions, el guardado del Markdown debe dispararlo automáticamente. Verificar su resultado y sus archivos en GitHub si es posible. Si falla o está pendiente, informarlo claramente; no afirmar que ya están actualizadas.
+6. Si el flujo no está disponible, regenerar ambas presentaciones durante la misma tarea cuando se disponga de herramientas. Si no es técnicamente posible, explicar con precisión qué queda pendiente. **No pedir al profesor que recuerde indicar «actualiza la presentación».**
+7. Evitar generar presentaciones nuevas si solo se han cambiado los enlaces, el historial o la metadata sin afectar al contenido.
+
+### Cuando el docente modifica un Markdown directamente en GitHub
+
+1. Un workflow de `push` para `temas/**/tema-*.md` ejecuta el generador incremental.
+2. Se calcula una huella SHA-256 del **contenido pedagógico** (excluyendo cabecera de enlaces y bloque de versiones), más el generador o las plantillas que afecten a las diapositivas.
+3. Si la huella coincide con la de la generación anterior y existen ambas salidas, **no hacer nada** en ese tema.
+4. Si cambió o no existe alguna salida, actualizar **solo** HTML/PPTX de ese tema.
+5. Si el cambio pedagógico no tiene una nueva versión declarada, el generador debe incrementar automáticamente al menos PATCH y actualizar la fecha del Markdown; si el docente ya incrementó la versión, conservarla.
+6. Las presentaciones deben indicar la versión, fecha y huella de origen, y el generador debe guardar un manifiesto verificable para futuras comparaciones.
+7. El commit automático debe incluir solo archivos realmente modificados, no activar de nuevo el mismo workflow, y dejar trazabilidad del resultado.
+8. Si el generador tiene limitaciones para algún contenido (tablas complejas, imágenes, etc.), señalarlas y no afirmar que la presentación refleja exactamente el tema cuando no sea cierto.
+
+**El índice principal `README.md` solo se modifica si aparece un tema nuevo o cambia su ruta; no se reescribe por cada edición didáctica.**
+
+---
+
 ## 8. Flujo de trabajo para crear o actualizar un tema
 
 1. Leer `AGENTS.md`, `README.md` y los archivos existentes del tema.
 2. Aclarar qué contenido o actividad se desea ampliar o corregir. Si la instrucción es suficiente, actuar sin solicitar confirmaciones innecesarias.
 3. Editar primero el archivo `tema-NN.md`, conservando enlaces y estructura.
 4. Incrementar su versión de forma proporcionada y actualizar la fecha.
-5. Si se solicita presentación, generar o actualizar HTML y PPTX; reflejar versión y fecha del contenido, y usar enlaces en nuevas pestañas donde lo permita HTML.
+5. **Siempre que se modifica el contenido pedagógico, generar o actualizar automáticamente HTML y PPTX**, aunque no se solicite de manera expresa. Sincronizar versión, fecha y huella. Respetar pestañas nuevas en HTML.
 6. Si se solicita actividad, guardarla en `actividades/` y añadir un enlace no redundante desde el tema.
 7. Actualizar el enlace del `README.md` **solo cuando se cree el contenido de un tema que antes no existía** o cambie su ruta.
 8. Comprobar las rutas y visualizar/verificar los resultados en la medida que permitan las herramientas.
@@ -215,3 +244,4 @@ Cuando se apruebe una nueva preferencia, añadirla a su sección correspondiente
 | Versión | Fecha | Cambio |
 |---|---|---|
 | 1.0.0 | 19/11/2026 | Primer documento de normas: estructura de temas, enlaces, contenidos, HTML/PPTX, versiones y diseño de automatización incremental. |
+| 1.1.0 | 19/11/2026 | Sincronización obligatoria de presentaciones al añadir o modificar contenidos, incluso por voz y sin petición adicional; autorización para GitHub Actions. |

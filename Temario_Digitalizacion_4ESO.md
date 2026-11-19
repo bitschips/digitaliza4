@@ -1,7 +1,4 @@
-# Digitalización – 4.º ESO
-**Comunitat Valenciana · GVA · Curso 2026-2027**
-
-Índice resumido de contenidos basado en el currículo de la Generalitat Valenciana (Decreto 107/2022 y modificaciones posteriores).
+# Digitalización
 
 ## Bloque 1. Dispositivos digitales, sistemas operativos y comunicación
 

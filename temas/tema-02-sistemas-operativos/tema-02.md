@@ -33,6 +33,8 @@ Un **sistema operativo (SO)** es el software básico que permite utilizar un ord
 
 No hay que confundir **sistema operativo** con **aplicación**: Windows o Linux gestionan el equipo; un navegador o un procesador de textos realizan tareas concretas sobre el sistema.
 
+<!-- IMAGEN: IMG/escritorio-sistema-operativo.svg | TITULO: El escritorio de un sistema operativo | POSICION: DESPUES -->
+
 ## 2. Breve historia y evolución
 
 | Época | Evolución | Idea clave |
@@ -75,6 +77,8 @@ Para comparar costes hay que distinguir **precio de la licencia**, **coste del e
 **Ejemplo orientativo sin precios fijos:** instalar Linux Mint en un ordenador compatible puede no tener coste de licencia. Comprar un PC con Windows puede incluir el importe de su licencia. Una empresa puede decidir pagar una suscripción de Linux empresarial para recibir soporte especializado.
 
 **Actividad breve:** ¿qué opción elegirías para diez ordenadores antiguos de un aula y por qué? Razona el coste total, no solo la descarga.
+
+<!-- IMAGEN: IMG/comparacion-sistemas-operativos.svg | TITULO: Sistemas operativos en distintos dispositivos | POSICION: DESPUES -->
 
 ## 5. Cómo funciona un sistema operativo
 
@@ -137,6 +141,8 @@ Un **archivo** almacena información; una **carpeta o directorio** permite organ
 
 **No confundir:** poder descargar gratis una imagen ISO no garantiza que todos los servicios profesionales de una distribución sean gratuitos.
 
+<!-- IMAGEN: IMG/distribuciones-linux.svg | TITULO: Distribuciones GNU/Linux | POSICION: DESPUES -->
+
 ## 9. Descarga e instalación de sistemas operativos
 
 Una **imagen ISO** es un archivo que contiene una imagen de un soporte de instalación o arranque. Se debe descargar desde la **web oficial**, seleccionar la versión y arquitectura compatibles, leer los requisitos y, cuando sea posible, verificar la suma de comprobación (SHA-256) publicada.
@@ -159,7 +165,11 @@ En una instalación normal, el asistente puede crear o modificar particiones y *
 
 **Limitaciones y precauciones:** algunos equipos necesitan ajustes compatibles de UEFI/Secure Boot; un disco cifrado requerirá la clave; un soporte físicamente dañado puede ser ilegible; un USB Live no garantiza recuperar todos los ordenadores ni reparar cualquier avería. En equipos del aula, hacerlo siempre con permiso y supervisión. Evitar modificar particiones o escribir sobre un disco que pueda estar dañado antes de salvaguardar sus datos.
 
+<!-- IMAGEN: IMG/usb-live-linux.svg | TITULO: Arranque desde un USB Live | POSICION: DESPUES -->
+
 **Actividad de clase:** en un ordenador autorizado, preparar un USB Live, arrancar una sesión de prueba, identificar el sistema operativo y localizar una carpeta de ejemplo. Documentar en cuatro capturas los pasos y explicar por qué el sistema instalado permanece sin cambios cuando no se ejecuta el instalador ni se modifica el disco.
+
+<!-- IMAGEN: IMG/recuperacion-archivos-linux.svg | TITULO: Recuperación de archivos de Windows con Linux Live | POSICION: DESPUES -->
 
 ## 11. Actualizaciones, mantenimiento y seguridad
 
@@ -253,6 +263,6 @@ A veces **Windows deja de arrancar, pero los archivos siguen guardados en el dis
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.1.0
+- **Versión del contenido:** 1.2.0
 - **Última actualización:** 20/11/2026
 - **Estado:** Contenido aprobado y ampliable

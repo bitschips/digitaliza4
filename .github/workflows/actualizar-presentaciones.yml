@@ -6,7 +6,7 @@ on:
     paths:
       - 'temas/**/tema-*.md'
       - 'temas/**/imagenes/**'
-      - 'temas/**/IMG/**'
+      - 'temas/**/img/**'
       - 'scripts/generar_presentaciones.py'
       - '.github/workflows/actualizar-presentaciones.yml'
   workflow_dispatch:

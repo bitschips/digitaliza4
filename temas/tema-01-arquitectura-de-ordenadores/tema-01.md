@@ -26,7 +26,7 @@ Al finalizar este tema, el alumnado debería poder:
 
 Los ordenadores procesan información mediante señales digitales que se representan con dos valores: **0 y 1**. Cada valor se denomina **bit**. Un conjunto de ocho bits forma un **byte**, una unidad habitual para expresar el tamaño de los datos.
 
-<!-- IMAGEN: IMG/de-bits-a-gigabyte.svg | TITULO: Del bit al gigabyte | POSICION: DESPUES -->
+<!-- IMAGEN: img/de-bits-a-gigabyte.svg | TITULO: Del bit al gigabyte | POSICION: DESPUES -->
 
 Los mismos bits pueden representar distintos tipos de información dependiendo de las reglas de codificación que se utilicen:
 
@@ -41,7 +41,7 @@ Los mismos bits pueden representar distintos tipos de información dependiendo d
 
 ## 2. Hardware y componentes de un ordenador
 
-<!-- IMAGEN: IMG/componentes-ordenador.svg | TITULO: Componentes del ordenador | POSICION: DESPUES -->
+<!-- IMAGEN: img/componentes-ordenador.svg | TITULO: Componentes del ordenador | POSICION: DESPUES -->
 
 El **hardware** es el conjunto de componentes físicos de un dispositivo. El **software** es el conjunto de programas e instrucciones que permiten utilizarlo.
 
@@ -58,7 +58,7 @@ Los **periféricos de entrada** permiten introducir información (teclado, rató
 
 ### 2.1. ¿Cómo trabajan juntos?
 
-<!-- IMAGEN: IMG/recorrido-ssd-ram-cpu.svg | TITULO: Del SSD a la pantalla | POSICION: DESPUES -->
+<!-- IMAGEN: img/recorrido-ssd-ram-cpu.svg | TITULO: Del SSD a la pantalla | POSICION: DESPUES -->
 
 Al abrir una aplicación, sus datos pasan normalmente del almacenamiento a la memoria RAM. La CPU ejecuta sus instrucciones y, cuando es necesario mostrar imágenes, interviene la GPU. El sistema operativo coordina el uso de estos recursos.
 
@@ -67,7 +67,7 @@ Al abrir una aplicación, sus datos pasan normalmente del almacenamiento a la me
 
 ### 2.2. El transistor: la pieza básica de las CPU y GPU
 
-<!-- IMAGEN: IMG/transistor-interruptor.svg | TITULO: El transistor como interruptor | POSICION: DESPUES -->
+<!-- IMAGEN: img/transistor-interruptor.svg | TITULO: El transistor como interruptor | POSICION: DESPUES -->
 
 Un **transistor** es un componente electrónico diminuto fabricado con material semiconductor, normalmente **silicio**. Se puede utilizar como un **interruptor electrónico** que deja pasar o interrumpe una corriente según la señal que recibe. Esta idea sirve para explicar, de forma sencilla, cómo funcionan los circuitos digitales.
 
@@ -79,7 +79,7 @@ Un **transistor** es un componente electrónico diminuto fabricado con material 
 
 #### Evolución del número de transistores en procesadores y SoC
 
-<!-- IMAGEN: IMG/miniaturizacion-transistores.svg | TITULO: Miniaturización de los transistores | POSICION: DESPUES -->
+<!-- IMAGEN: img/miniaturizacion-transistores.svg | TITULO: Miniaturización de los transistores | POSICION: DESPUES -->
 
 | Año | Procesador | Transistores aproximados | Tipo |
 |---|---|---:|---|
@@ -95,7 +95,7 @@ Un **transistor** es un componente electrónico diminuto fabricado con material 
 
 #### Evolución de los chips gráficos y de IA de NVIDIA
 
-<!-- IMAGEN: IMG/evolucion-transistores.svg | TITULO: Evolución histórica de los transistores | POSICION: DESPUES -->
+<!-- IMAGEN: img/evolucion-transistores.svg | TITULO: Evolución histórica de los transistores | POSICION: DESPUES -->
 
 | Año | Chip NVIDIA | Transistores aproximados | Uso destacado |
 |---|---|---:|---|

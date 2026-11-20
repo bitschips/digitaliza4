@@ -1,6 +1,6 @@
 # AGENTS.md — Normas y procedimientos del proyecto Digitalización 4.º ESO
 
-> **Versión de estas normas:** 1.6.2  
+> **Versión de estas normas:** 1.6.3  
 > **Última actualización:** 20/11/2026  
 > **Estado:** Documento vivo; revisar y ampliar cuando cambie el procedimiento.
 
@@ -198,7 +198,7 @@ El procedimiento que se debe conservar en las futuras revisiones es:
 
 - La ruta del `push` que activa el flujo para **contenido didáctico Markdown** es `temas/**/tema-*.md`, en la rama `main`. Por ejemplo, `tema-02.md` coincide; `REVISION-tema-02.md` **no** coincide porque empieza por `REVISION-`.
 - No basta con escribir «Borrador» o «Aprobado» dentro del documento: es el **nombre y la ruta** del archivo lo que determina si su edición activa este disparador.
-- **Excepción importante a la frase «solo se ejecuta con tema-NN.md»:** el workflow también se activa al cambiar `temas/**/IMG/**`, `temas/**/imagenes/**`, `scripts/generar_presentaciones.py` o el propio workflow, y se puede lanzar manualmente mediante `workflow_dispatch`. Por tanto, evitar modificar esos recursos durante una revisión si se quiere evitar cualquier ejecución automática. Una ejecución por otro motivo no convierte el borrador en fuente: el generador debe usar los archivos oficiales `tema-NN.md`.
+- **Excepción importante a la frase «solo se ejecuta con tema-NN.md»:** el workflow también se activa al cambiar `temas/**/img/**`, `temas/**/imagenes/**`, `scripts/generar_presentaciones.py` o el propio workflow, y se puede lanzar manualmente mediante `workflow_dispatch`. Por tanto, evitar modificar esos recursos durante una revisión si se quiere evitar cualquier ejecución automática. Una ejecución por otro motivo no convierte el borrador en fuente: el generador debe usar los archivos oficiales `tema-NN.md`.
 - La Action puede ejecutarse sin regenerar nada si la huella de contenido no cambia. **Activación de la Action y generación efectiva de archivos son dos cosas diferentes.**
 - **Una vez aprobado un tema**, cualquier petición posterior de añadir o corregir sus contenidos oficiales implica mantener sincronizadas sus presentaciones automáticamente, según el apartado 7.2; el estado de revisión es una excepción deliberada *antes de su primera aprobación*, o cuando el docente pida explícitamente preparar una revisión separada.
 
@@ -268,7 +268,7 @@ Contenido complementario que no debe aparecer en las diapositivas.
 
 ## 7.4. Imágenes en diapositivas independientes
 
-Las carpetas `IMG/` existen en los 18 temas. Los archivos de imagen deben utilizar **nombres semánticos**, nunca números de diapositiva.
+Las carpetas `img/` existen en los 18 temas. Los archivos de imagen deben utilizar **nombres semánticos**, nunca números de diapositiva.
 
 Para añadir una diapositiva independiente de imagen, colocar un comentario HTML en el Markdown, **junto a la explicación asociada**:
 
@@ -277,10 +277,10 @@ Para añadir una diapositiva independiente de imagen, colocar un comentario HTML
 
 La CPU ejecuta instrucciones mediante circuitos.
 
-<!-- IMAGEN: IMG/funcionamiento-cpu.png | TITULO: Interior de una CPU | POSICION: DESPUES -->
+<!-- IMAGEN: img/funcionamiento-cpu.png | TITULO: Interior de una CPU | POSICION: DESPUES -->
 ```
 
-- El generador reconoce `IMAGEN:` con ruta relativa dentro de `IMG/`; admite PNG, JPEG y WebP; `TITULO` y `POSICION` son opcionales.
+- El generador reconoce `IMAGEN:` con ruta relativa dentro de `img/`; admite PNG, JPEG y WebP; `TITULO` y `POSICION` son opcionales.
 - `POSICION: DESPUES` (por defecto) termina primero las diapositivas de texto pendientes y agrega la imagen a continuación. `POSICION: ANTES` crea la diapositiva de imagen antes del texto pendiente en ese punto del documento.
 - Si se necesita una imagen **después de la segunda diapositiva de un apartado**, insertar la marca en el Markdown **tras el fragmento concreto que termina esa segunda unidad**. La posición se ancla al contenido, no al número global de diapositiva; no prometer posiciones numéricas fijas tras cambios del texto.
 - Cada imagen ocupa una diapositiva propia con título y ajuste de tamaño proporcional, tanto en HTML como en PPTX.
@@ -342,3 +342,4 @@ Cuando se apruebe una nueva preferencia, añadirla a su sección correspondiente
 | 1.6.0 | 20/11/2026 | Procedimiento explícito de revisión mediante REVISION-tema-NN.md, aprobación previa y disparadores reales del workflow. |
 | 1.6.1 | 20/11/2026 | Numeración de apartados de automatización como 7.1, 7.2, 7.3 y 7.4 y actualización de referencia interna. |
 | 1.6.2 | 20/11/2026 | Actualización de referencias y enlaces tras renombrar el repositorio a digitaliza4. |
+| 1.6.3 | 20/11/2026 | Renombrar todas las carpetas IMG a img, actualizar referencias y disparadores del generador. |

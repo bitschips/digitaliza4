@@ -59,7 +59,7 @@ def source_content(text: str) -> str:
 
 
 IMAGE_MARK_RE = re.compile(
-    r"^IMAGEN:\s*(IMG/[a-zA-Z0-9_.-]+\.(?:png|jpg|jpeg|webp|svg))"
+    r"^IMAGEN:\s*(img/[a-zA-Z0-9_.-]+\.(?:png|jpg|jpeg|webp|svg))"
     r"(?:\s*\|\s*TITULO:\s*([^|]+?))?"
     r"(?:\s*\|\s*POSICION:\s*(ANTES|DESPUES))?\s*$", re.IGNORECASE,
 )

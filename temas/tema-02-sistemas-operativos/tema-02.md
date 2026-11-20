@@ -200,10 +200,59 @@ Actualizar el sistema y sus aplicaciones corrige errores y vulnerabilidades. Con
 - **UEFI:** firmware moderno que ayuda a iniciar el ordenador.
 - **Partición:** división lógica de un dispositivo de almacenamiento.
 
+
+<!-- PRESENTACION:EXCLUIR -->
+
+## 15. Ampliación opcional: casos reales de uso y mantenimiento cotidiano
+
+Este apartado complementa el temario básico y **no se incorpora automáticamente a las presentaciones**. Conecta el funcionamiento de los sistemas operativos con situaciones que pueden surgir en casa o en el aula.
+
+### 15.1. ¿Qué ocurre al encender un ordenador?
+
+1. Al pulsar el botón de encendido, el equipo comienza a alimentar sus componentes.
+2. El firmware **UEFI/BIOS** comprueba e inicializa parte del hardware y localiza un dispositivo de arranque.
+3. Un **gestor de arranque** inicia la carga del sistema operativo.
+4. El **núcleo o kernel** comienza a gestionar memoria, procesos y dispositivos.
+5. Se inician servicios y aparece la pantalla de inicio de sesión y, después, el escritorio.
+
+**Relación con el Tema 1:** la CPU ejecuta instrucciones, el almacenamiento contiene el sistema y la RAM permite cargar los programas en funcionamiento.
+
+### 15.2. Máquinas virtuales: dos sistemas operativos en un equipo
+
+Una **máquina virtual** es un ordenador simulado mediante software. Herramientas como VirtualBox permiten, en equipos compatibles y con recursos suficientes, probar un sistema operativo invitado (por ejemplo, Debian) dentro de otro anfitrión (por ejemplo, Windows o Linux), sin reemplazar el sistema original.
+
+**Ejemplo:** arrancar Debian en una ventana, practicar con carpetas y apagar la máquina virtual. Necesita RAM, CPU y almacenamiento propios asignados y un archivo ISO o disco virtual. No confundir una máquina virtual con arrancar un USB Live.
+
+### 15.3. Dar una segunda vida a un ordenador antiguo
+
+En un equipo con poca RAM o procesador modesto puede ser útil una distribución con entorno de escritorio ligero, como Debian con LXQt/Xfce o Linux Mint Xfce. **No todos los sistemas Linux consumen menos que Windows**: el resultado depende de la versión, el escritorio, los servicios, los controladores y las aplicaciones abiertas.
+
+**Actividad propuesta:** anotar procesador, RAM y almacenamiento de un ordenador y comparar los requisitos oficiales de varias distribuciones. Hablar también del ahorro económico y de la reducción de residuos electrónicos por reutilización.
+
+### 15.4. ¿Qué hacer cuando una aplicación se bloquea?
+
+El sistema operativo gestiona procesos y puede ayudar a identificar un programa que no responde. En Windows puede utilizarse el **Administrador de tareas**; en Linux, el **Monitor del sistema** o herramientas equivalentes. Antes de finalizar una aplicación es conveniente intentar guardar el trabajo; cerrar a la fuerza puede hacer perder cambios sin guardar.
+
+**Práctica:** abrir dos aplicaciones, consultar su consumo aproximado de CPU y memoria, y describir las diferencias sin forzar bloqueos reales.
+
+### 15.5. Privacidad y permisos
+
+Los sistemas operativos ofrecen configuraciones relacionadas con ubicación, cámara, micrófono, actualizaciones y datos de diagnóstico. Algunas funciones y servicios pueden recopilar información según las opciones activadas y las políticas del proveedor.
+
+**Práctica:** revisar los permisos de una aplicación de ejemplo sin modificar cuentas ajenas ni compartir información personal.
+
+### 15.6. Recuperar archivos cuando Windows no arranca
+
+A veces **Windows deja de arrancar, pero los archivos siguen guardados en el disco**. Un USB con una distribución Linux en modo Live puede permitir acceder a ellos y copiarlos a otra unidad, siempre que el almacenamiento sea legible y se disponga de las credenciales o claves necesarias. **Rescatar archivos no equivale a reparar Windows.**
+
+**Actividad práctica de ampliación:** [Recuperar archivos de un Windows que no arranca mediante un USB Live de Linux](actividades/actividad-01-recuperar-archivos-windows-usb-linux.md). Se realiza sobre equipos autorizados con archivos ficticios, sin reinstalar ni modificar particiones. Un disco cifrado o averiado puede requerir asistencia especializada.
+
+<!-- PRESENTACION:FIN_EXCLUSION -->
+
 ---
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.0.0
+- **Versión del contenido:** 1.1.0
 - **Última actualización:** 20/11/2026
 - **Estado:** Contenido aprobado y ampliable

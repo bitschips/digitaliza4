@@ -6,7 +6,7 @@
 
 ## 1. Propósito y alcance
 
-Este archivo recoge las decisiones de organización, preferencias y procedimientos para mantener y ampliar el repositorio `bitschips/digitalizaci-n-4`.
+Este archivo recoge las decisiones de organización, preferencias y procedimientos para mantener y ampliar el repositorio `bitschips/digitaliza4`.
 
 **Instrucción para asistentes, colaboradores y automatizaciones:** leer este archivo antes de crear, modificar, reorganizar o publicar contenidos. Aplicar sus reglas a todos los temas, respetando las peticiones nuevas y explícitas del profesor. Si una nueva decisión cambia estas normas, actualizar este mismo documento y su versión.
 
@@ -28,7 +28,7 @@ La finalidad es mantener los contenidos **editables, reutilizables y preparados 
 ## 3. Estructura del repositorio
 
 ```text
-digitalizaci-n-4/
+digitaliza4/
 ├── README.md
 ├── AGENTS.md                         # Normas y métodos de trabajo
 └── temas/
@@ -149,7 +149,7 @@ Se mantendrán **dos versiones de cada presentación**, en `presentaciones/`:
 
 Ejemplo de visor para el Tema 1:
 
-`https://htmlpreview.github.io/?https://github.com/bitschips/digitalizaci-n-4/blob/main/temas/tema-01-arquitectura-de-ordenadores/presentaciones/tema-01.html`
+`https://htmlpreview.github.io/?https://github.com/bitschips/digitaliza4/blob/main/temas/tema-01-arquitectura-de-ordenadores/presentaciones/tema-01.html`
 
 Alojar un HTML **como archivo en GitHub** no equivale a publicarlo como sitio web nativo; la vista de diapositivas se obtiene aquí mediante un visor externo. Si el visor deja de funcionar, buscar una alternativa y comentarla antes de cambiar la arquitectura.
 

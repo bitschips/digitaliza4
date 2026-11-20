@@ -1,9 +1,9 @@
 {
-  "source_sha256": "7300ad6cb0bb0aded56322e3101ff111ee70ed43c8561c85007ce9554eecdba5",
-  "content_version": "1.4.1",
+  "source_sha256": "39e7900c52e3fef302045f8ae1e3b86833c2170a7393a115f2a339ecef19635d",
+  "content_version": "1.5.0",
   "updated_date": "20/11/2026",
   "generator_sha256": "620e6076d03ab0bcbc903301669fd11978b130e1355c94476293c82b11e0c056",
-  "slides": 35,
+  "slides": 40,
   "html": "tema-01.html",
   "pptx": "tema-01-arquitectura-de-ordenadores.pptx"
 }

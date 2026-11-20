@@ -1,6 +1,6 @@
 # AGENTS.md — Normas y procedimientos del proyecto Digitalización 4.º ESO
 
-> **Versión de estas normas:** 1.6.0  
+> **Versión de estas normas:** 1.6.1  
 > **Última actualización:** 20/11/2026  
 > **Estado:** Documento vivo; revisar y ampliar cuando cambie el procedimiento.
 
@@ -153,7 +153,7 @@ Ejemplo de visor para el Tema 1:
 
 Alojar un HTML **como archivo en GitHub** no equivale a publicarlo como sitio web nativo; la vista de diapositivas se obtiene aquí mediante un visor externo. Si el visor deja de funcionar, buscar una alternativa y comentarla antes de cambiar la arquitectura.
 
-## 7. Automatización incremental con GitHub Actions
+## 7.1. Automatización incremental con GitHub Actions
 
 **Sistema activo y comprobado:** cuando cambie el contenido de un tema, regenerar **solo las presentaciones desactualizadas**, no todo el repositorio.
 
@@ -200,7 +200,7 @@ El procedimiento que se debe conservar en las futuras revisiones es:
 - No basta con escribir «Borrador» o «Aprobado» dentro del documento: es el **nombre y la ruta** del archivo lo que determina si su edición activa este disparador.
 - **Excepción importante a la frase «solo se ejecuta con tema-NN.md»:** el workflow también se activa al cambiar `temas/**/IMG/**`, `temas/**/imagenes/**`, `scripts/generar_presentaciones.py` o el propio workflow, y se puede lanzar manualmente mediante `workflow_dispatch`. Por tanto, evitar modificar esos recursos durante una revisión si se quiere evitar cualquier ejecución automática. Una ejecución por otro motivo no convierte el borrador en fuente: el generador debe usar los archivos oficiales `tema-NN.md`.
 - La Action puede ejecutarse sin regenerar nada si la huella de contenido no cambia. **Activación de la Action y generación efectiva de archivos son dos cosas diferentes.**
-- **Una vez aprobado un tema**, cualquier petición posterior de añadir o corregir sus contenidos oficiales implica mantener sincronizadas sus presentaciones automáticamente, según «7 bis»; el estado de revisión es una excepción deliberada *antes de su primera aprobación*, o cuando el docente pida explícitamente preparar una revisión separada.
+- **Una vez aprobado un tema**, cualquier petición posterior de añadir o corregir sus contenidos oficiales implica mantener sincronizadas sus presentaciones automáticamente, según el apartado 7.2; el estado de revisión es una excepción deliberada *antes de su primera aprobación*, o cuando el docente pida explícitamente preparar una revisión separada.
 
 **Ejemplo de uso por voz:** «Prepara el tema 3 en revisión» → crear `REVISION-tema-03.md` sin presentación; «Apruebo el tema 3» → publicar `tema-03.md` y comprobar HTML/PPTX; «Añade una explicación al tema 3» → editar el oficial y sincronizar presentaciones. Nunca interpretar «voy a revisarlo» como aprobación.
 
@@ -216,7 +216,7 @@ El procedimiento que se debe conservar en las futuras revisiones es:
 
 Actualmente **ya se utiliza** `presentaciones/manifest.json` en cada tema desarrollado. Mantener esta estructura para que el generador incremental pueda comparar cambios sin depender solo de la versión manual.
 
-## 7 bis. SINCRONIZACIÓN AUTOMÁTICA OBLIGATORIA (prioridad alta)
+## 7.2. SINCRONIZACIÓN AUTOMÁTICA OBLIGATORIA (prioridad alta)
 
 **Regla central: una petición de «añade/corrige/modifica este punto en el Tema N» incluye implícitamente actualizar sus presentaciones HTML y PPTX. El docente NO tiene que solicitar «actualiza la presentación».** Aplica incluso si el cambio se dicta por voz o es una sola línea.
 
@@ -245,7 +245,7 @@ Actualmente **ya se utiliza** `presentaciones/manifest.json` en cada tema desarr
 
 ---
 
-## 7 ter. Exclusión de secciones opcionales de las presentaciones
+## 7.3. Exclusión de secciones opcionales de las presentaciones
 
 **Regla aprobada:** los contenidos de ampliación pueden conservarse en el Markdown del tema sin incorporarse a HTML/PPTX. Rodear los apartados opcionales con comentarios HTML exactos:
 
@@ -266,7 +266,7 @@ Contenido complementario que no debe aparecer en las diapositivas.
 - La versión del Markdown puede evolucionar independientemente de la presentación cuando solo cambie una ampliación excluida. El manifiesto de presentación refleja la versión de la última generación, no necesariamente la del documento completo.
 - Una modificación del generador común puede requerir una **única regeneración de transición** para adoptar la nueva lógica, aunque no se cambie el temario visible. No atribuir esa transición a la inclusión de la ampliación.
 
-## 7 quater. Imágenes en diapositivas independientes
+## 7.4. Imágenes en diapositivas independientes
 
 Las carpetas `IMG/` existen en los 18 temas. Los archivos de imagen deben utilizar **nombres semánticos**, nunca números de diapositiva.
 
@@ -340,3 +340,4 @@ Cuando se apruebe una nueva preferencia, añadirla a su sección correspondiente
 | 1.4.0 | 19/11/2026 | Marcas HTML para excluir ampliaciones de HTML/PPTX y de la huella de cambios; inclusión automática al dictarlas por voz. |
 | 1.5.0 | 19/11/2026 | Marcas IMAGEN con posición relativa, diapositiva independiente, carpeta IMG y huellas de recursos. |
 | 1.6.0 | 20/11/2026 | Procedimiento explícito de revisión mediante REVISION-tema-NN.md, aprobación previa y disparadores reales del workflow. |
+| 1.6.1 | 20/11/2026 | Numeración de apartados de automatización como 7.1, 7.2, 7.3 y 7.4 y actualización de referencia interna. |

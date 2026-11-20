@@ -1,13 +1,19 @@
-# Imágenes del tema 2
+# Imágenes del Tema 2. Sistemas operativos
 
-Esta carpeta contiene las ilustraciones, fotografías y diagramas asociados al contenido didáctico del tema.
+Ilustraciones SVG originales para el contenido didáctico de Digitalización, 4.º ESO.
 
-## Convenciones
+| Archivo | Concepto | Apartado |
+|---|---|---|
+| [escritorio-sistema-operativo.svg](escritorio-sistema-operativo.svg) | Funciones del escritorio y del sistema | 1 |
+| [comparacion-sistemas-operativos.svg](comparacion-sistemas-operativos.svg) | Sistemas en ordenadores y móviles | 4 |
+| [distribuciones-linux.svg](distribuciones-linux.svg) | Linux Mint, Debian, Alpine y LliureX | 8 |
+| [usb-live-linux.svg](usb-live-linux.svg) | Iniciar Linux en modo Live | 10 |
+| [recuperacion-archivos-linux.svg](recuperacion-archivos-linux.svg) | Recuperar archivos con un USB Live | 10 |
 
-- Usar nombres descriptivos y estables, por ejemplo `funcionamiento-cpu.png`, y **nunca** nombres basados únicamente en el número de diapositiva.
-- Enlazar imágenes desde el Markdown mediante rutas relativas, por ejemplo `![Funcionamiento de la CPU](IMG/funcionamiento-cpu.png)`.
-- Conservar las imágenes cuando se reordenen o inserten diapositivas. Cambiarlas únicamente si el concepto visual cambia.
-- Optimizar tamaños; documentar autoría o licencia cuando proceda; revisar la exactitud técnica de las imágenes generadas por IA.
-- No incluir imágenes en apartados marcados `PRESENTACION:EXCLUIR` dentro de las presentaciones.
+Son **ilustraciones didácticas**, no capturas exactas de aplicaciones ni pantallas reales. Las referencias a los sistemas y sus menús son simplificadas.
 
-**Estado:** carpeta preparada; no se han generado imágenes todavía.
+## Integración en presentaciones
+
+Las cinco imágenes se enlazan con comentarios `<!-- IMAGEN: ... -->` en [tema-02.md](../tema-02.md). Cada comentario produce una diapositiva independiente en HTML y PowerPoint mediante `scripts/generar_presentaciones.py`. El generador convierte internamente los SVG a imágenes de mapa de bits para PowerPoint mediante CairoSVG; el HTML utiliza directamente los SVG vectoriales.
+
+No insertar nuevas imágenes en bloques excluidos de presentación salvo instrucción expresa. Mantener nombres descriptivos, rutas relativas y proporción 16:9.

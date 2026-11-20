@@ -1,7 +1,7 @@
 # AGENTS.md — Normas y procedimientos del proyecto Digitalización 4.º ESO
 
-> **Versión de estas normas:** 1.5.0  
-> **Última actualización:** 19/11/2026  
+> **Versión de estas normas:** 1.6.0  
+> **Última actualización:** 20/11/2026  
 > **Estado:** Documento vivo; revisar y ampliar cuando cambie el procedimiento.
 
 ## 1. Propósito y alcance
@@ -177,6 +177,33 @@ El procedimiento que se debe conservar en las futuras revisiones es:
 9. **Registrar los resultados** de la ejecución: temas actualizados, omitidos y fallidos. Si falla un tema, no indicar que su presentación está actualizada.
 10. **No desplegar GitHub Pages** como parte de este proceso.
 
+### Flujo de revisión y publicación: dos nombres, dos estados
+
+**Regla para todos los temas:** se puede preparar y compartir el contenido antes de generar diapositivas. El archivo de revisión se llama `REVISION-tema-NN.md`, mientras que la **fuente oficial de presentaciones** se llama exactamente `tema-NN.md`, dentro de su carpeta `temas/tema-NN-nombre/`.
+
+| Estado | Ejemplo del Tema 2 | Comportamiento |
+|---|---|---|
+| **En revisión** | `temas/tema-02-sistemas-operativos/REVISION-tema-02.md` | Se puede publicar, leer, comentar y modificar en GitHub **sin disparar la generación por ese archivo**. No se crean HTML/PPTX al cambiar solo el borrador. |
+| **Aprobado / publicado** | `temas/tema-02-sistemas-operativos/tema-02.md` | Se convierte en fuente oficial. Crear o modificar este archivo en `main` **sí coincide** con el filtro de la Action y permite regenerar HTML y PPTX. |
+
+**Procedimiento para un tema nuevo:**
+
+1. Redactar su contenido completo en `REVISION-tema-NN.md`, con el mismo nivel didáctico, enlaces y estructura que el documento definitivo. No crear todavía `tema-NN.md`.
+2. Publicar el archivo de revisión y facilitar al docente su enlace directo. Esperar sus correcciones y su **aprobación expresa para pasar a definitivo**. Que el archivo sea público no significa que esté aprobado.
+3. Durante la revisión, modificar únicamente `REVISION-tema-NN.md`; no renombrarlo ni copiarlo a `tema-NN.md` por iniciativa propia.
+4. Tras la aprobación, llevar el contenido validado a `tema-NN.md`, actualizar su versión y fecha, incluir los enlaces de materiales cuando proceda y enlazarlo desde el índice `README.md` si todavía no existe.
+5. Comprobar la ejecución de GitHub Actions y que se hayan creado o actualizado las presentaciones HTML y PPTX y el manifiesto. Comunicar errores o ejecuciones pendientes con precisión. El borrador puede retirarse **solo si el docente lo autoriza**; evitar confusión entre ambos archivos.
+
+**Detalles técnicos del disparador (verificados en `.github/workflows/actualizar-presentaciones.yml`):**
+
+- La ruta del `push` que activa el flujo para **contenido didáctico Markdown** es `temas/**/tema-*.md`, en la rama `main`. Por ejemplo, `tema-02.md` coincide; `REVISION-tema-02.md` **no** coincide porque empieza por `REVISION-`.
+- No basta con escribir «Borrador» o «Aprobado» dentro del documento: es el **nombre y la ruta** del archivo lo que determina si su edición activa este disparador.
+- **Excepción importante a la frase «solo se ejecuta con tema-NN.md»:** el workflow también se activa al cambiar `temas/**/IMG/**`, `temas/**/imagenes/**`, `scripts/generar_presentaciones.py` o el propio workflow, y se puede lanzar manualmente mediante `workflow_dispatch`. Por tanto, evitar modificar esos recursos durante una revisión si se quiere evitar cualquier ejecución automática. Una ejecución por otro motivo no convierte el borrador en fuente: el generador debe usar los archivos oficiales `tema-NN.md`.
+- La Action puede ejecutarse sin regenerar nada si la huella de contenido no cambia. **Activación de la Action y generación efectiva de archivos son dos cosas diferentes.**
+- **Una vez aprobado un tema**, cualquier petición posterior de añadir o corregir sus contenidos oficiales implica mantener sincronizadas sus presentaciones automáticamente, según «7 bis»; el estado de revisión es una excepción deliberada *antes de su primera aprobación*, o cuando el docente pida explícitamente preparar una revisión separada.
+
+**Ejemplo de uso por voz:** «Prepara el tema 3 en revisión» → crear `REVISION-tema-03.md` sin presentación; «Apruebo el tema 3» → publicar `tema-03.md` y comprobar HTML/PPTX; «Añade una explicación al tema 3» → editar el oficial y sincronizar presentaciones. Nunca interpretar «voy a revisarlo» como aprobación.
+
 ### Ejemplo de decisión de actualización
 
 | Tema | Contenido actual | Presentación existente | Decisión |
@@ -282,7 +309,7 @@ La CPU ejecuta instrucciones mediante circuitos.
 - `tema-01.md`: ampliado con transistores y evolución histórica CPU/NVIDIA, versión **1.1.0**, con control de versión al final.
 - `tema-01.html`: presentación HTML generada automáticamente, versión **1.1.0**.
 - `tema-01-arquitectura-de-ordenadores.pptx`: presentación editable generada automáticamente, versión **1.1.0**.
-- Los **temas 2–18 aún no tienen contenido de tema desarrollado**.
+- El **Tema 2** tiene un contenido de revisión en `REVISION-tema-02.md`, pendiente de aprobación y todavía sin presentaciones. Los temas 3–18 aún no tienen contenido desarrollado.
 - El flujo común de regeneración incremental ya está activo: `.github/workflows/actualizar-presentaciones.yml`. La modificación del Tema 1 disparó la Action, que publicó ambas presentaciones en versión **1.1.0**.
 - No se utiliza GitHub Pages.
 - No generar de nuevo el antiguo PDF ni el PowerPoint del índice principal.
@@ -312,3 +339,4 @@ Cuando se apruebe una nueva preferencia, añadirla a su sección correspondiente
 | 1.3.0 | 19/11/2026 | Índices de ideas de vídeos para los 18 temas; guiones y actividades enlazados sin regeneración innecesaria de presentaciones. |
 | 1.4.0 | 19/11/2026 | Marcas HTML para excluir ampliaciones de HTML/PPTX y de la huella de cambios; inclusión automática al dictarlas por voz. |
 | 1.5.0 | 19/11/2026 | Marcas IMAGEN con posición relativa, diapositiva independiente, carpeta IMG y huellas de recursos. |
+| 1.6.0 | 20/11/2026 | Procedimiento explícito de revisión mediante REVISION-tema-NN.md, aprobación previa y disparadores reales del workflow. |

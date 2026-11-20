@@ -7,7 +7,7 @@
 
 ## Materiales del tema
 
-- [Presentación HTML — abrir en el navegador](https://htmlpreview.github.io/?https://github.com/bitschips/digitalizaci-n-4/blob/main/temas/tema-01-arquitectura-de-ordenadores/presentaciones/tema-01.html)
+- [Presentación HTML — abrir en el navegador](https://htmlpreview.github.io/?https://github.com/bitschips/digitaliza4/blob/main/temas/tema-01-arquitectura-de-ordenadores/presentaciones/tema-01.html)
 - [Presentación PPTX — descargar](presentaciones/tema-01-arquitectura-de-ordenadores.pptx)
 - [Actividades](actividades/)
 

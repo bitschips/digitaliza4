@@ -263,6 +263,6 @@ A veces **Windows deja de arrancar, pero los archivos siguen guardados en el dis
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.2.0
+- **Versión del contenido:** 1.2.1
 - **Última actualización:** 20/11/2026
 - **Estado:** Contenido aprobado y ampliable

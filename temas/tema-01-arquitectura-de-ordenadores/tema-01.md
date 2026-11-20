@@ -199,6 +199,6 @@ Estas ideas son **ampliaciones opcionales**; no sustituyen los objetivos y conte
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.4.0
-- **Última actualización:** 19/11/2026
+- **Versión del contenido:** 1.4.1
+- **Última actualización:** 20/11/2026
 - **Estado:** Borrador ampliable

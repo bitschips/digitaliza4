@@ -9,6 +9,7 @@ Registrar **ideas y guiones para futuros vídeos didácticos** que permitan comp
 ## Índice de ideas
 
 1. [El viaje de una línea de código: de Python a la pantalla](video-01-viaje-linea-python.md) — **Idea y guion pendientes de producción**.
+2.   <a href="https://notebooklm.link.google/tQ5gQRcZ4F1T">Vídeo NotebookLM</a>
 
 ## Plantilla para nuevas propuestas
 

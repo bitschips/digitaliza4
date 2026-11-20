@@ -1,6 +1,6 @@
 # AGENTS.md — Normas y procedimientos del proyecto Digitalización 4.º ESO
 
-> **Versión de estas normas:** 1.6.1  
+> **Versión de estas normas:** 1.6.2  
 > **Última actualización:** 20/11/2026  
 > **Estado:** Documento vivo; revisar y ampliar cuando cambie el procedimiento.
 
@@ -341,3 +341,4 @@ Cuando se apruebe una nueva preferencia, añadirla a su sección correspondiente
 | 1.5.0 | 19/11/2026 | Marcas IMAGEN con posición relativa, diapositiva independiente, carpeta IMG y huellas de recursos. |
 | 1.6.0 | 20/11/2026 | Procedimiento explícito de revisión mediante REVISION-tema-NN.md, aprobación previa y disparadores reales del workflow. |
 | 1.6.1 | 20/11/2026 | Numeración de apartados de automatización como 7.1, 7.2, 7.3 y 7.4 y actualización de referencia interna. |
+| 1.6.2 | 20/11/2026 | Actualización de referencias y enlaces tras renombrar el repositorio a digitaliza4. |

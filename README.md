@@ -3,7 +3,7 @@
 ## Bloque 1. Dispositivos digitales, sistemas operativos y comunicación
 
 ### [Tema 1. Arquitectura de ordenadores](temas/tema-01-arquitectura-de-ordenadores/tema-01.md)
-### Tema 2. Sistemas operativos
+### [Tema 2. Sistemas operativos](temas/tema-02-sistemas-operativos/tema-02.md)
 ### Tema 3. Redes e Internet
 ### Tema 4. Resolución de problemas informáticos
 ## Bloque 2. Digitalización del entorno personal de aprendizaje

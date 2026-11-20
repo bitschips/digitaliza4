@@ -9,7 +9,7 @@
 
 - [Presentación HTML — abrir en el navegador](https://htmlpreview.github.io/?https://github.com/bitschips/digitaliza4/blob/main/temas/tema-01-arquitectura-de-ordenadores/presentaciones/tema-01.html)
 - [Presentación PPTX — descargar](presentaciones/tema-01-arquitectura-de-ordenadores.pptx)
-- <a href="https://notebooklm.link.google/WchzqtMfSim1">Presentación NotebookLM</a>
+- <a href="https://notebooklm.link.google/WchzqtMfSim1" target="_blank">Presentación NotebookLM</a>
 - [Actividades](actividades/)
 
 ## Objetivos de aprendizaje

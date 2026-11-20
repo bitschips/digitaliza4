@@ -39,6 +39,31 @@ Los mismos bits pueden representar distintos tipos de información dependiendo d
 
 **Unidades frecuentes:** bit (b), byte (B), megabyte (MB), gigabyte (GB) y terabyte (TB). Conviene distinguir la capacidad de almacenamiento de la velocidad de transferencia.
 
+### 1.1. Unidades de medida: capacidad, frecuencia y potencia de cálculo
+
+Cuando comparamos ordenadores, encontramos números acompañados de unidades distintas. **No significan lo mismo**: unas indican cuántos datos se pueden guardar; otras, cuántos ciclos u operaciones se realizan por segundo.
+
+<!-- IMAGEN: img/unidades-capacidad-frecuencia-potencia.svg | TITULO: GB, GHz y TFLOPS: tres medidas diferentes | POSICION: DESPUES -->
+
+| ¿Qué medimos? | Unidades | ¿Qué significa? | Ejemplo |
+|---|---|---|---|
+| **Capacidad de memoria y almacenamiento** | GB (gigabytes), TB (terabytes) | Cantidad de datos que caben en la RAM o en un SSD/HDD | 16 GB de RAM; SSD de 1 TB |
+| **Frecuencia de reloj de CPU o GPU** | MHz (megahercios), GHz (gigahercios) | Número de ciclos de reloj por segundo | CPU de 3,5 GHz |
+| **Potencia de cálculo, especialmente de GPU** | GFLOPS, TFLOPS | Número *teórico* de operaciones de coma flotante por segundo | GPU con 10 TFLOPS (FP32) |
+| **Velocidad de transferencia** | MB/s, GB/s o Mb/s, Gb/s | Cantidad de datos transmitidos cada segundo | SSD que lee a 500 MB/s |
+
+**Equivalencias sencillas:**
+
+- **1 TB = 1.000 GB** en la nomenclatura decimal habitual de fabricantes de almacenamiento. En unidades binarias, **1 TiB = 1.024 GiB**.
+- **1 GHz = 1.000 millones de ciclos de reloj por segundo**. Un ciclo no equivale necesariamente a una instrucción.
+- **1 TFLOPS = 1 billón de operaciones de coma flotante por segundo** (10¹²); las cifras deben indicar la precisión utilizada, por ejemplo FP32.
+
+**Importante:** una CPU de 4 GHz no es necesariamente más rápida que otra de 3 GHz: también influyen la arquitectura, los núcleos y las instrucciones realizadas por ciclo. Los TFLOPS tampoco expresan por sí solos la velocidad real de una GPU en videojuegos o inteligencia artificial.
+
+**Ejemplo para clase:** «Mi ordenador tiene **16 GB de RAM**, un **SSD de 1 TB** y una **CPU a 3,5 GHz**». Los GB y TB indican capacidad; los GHz indican frecuencia, no capacidad. Una GPU puede anunciar además su capacidad de cálculo en TFLOPS.
+
+**Pregunta rápida:** ¿qué unidad usarías para indicar cuánto cabe en un SSD, cuántos ciclos por segundo marca el reloj de la CPU y cuántas operaciones de coma flotante puede realizar teóricamente una GPU?
+
 ## 2. Hardware y componentes de un ordenador
 
 <!-- IMAGEN: img/componentes-ordenador.svg | TITULO: Componentes del ordenador | POSICION: DESPUES -->
@@ -199,6 +224,6 @@ Estas ideas son **ampliaciones opcionales**; no sustituyen los objetivos y conte
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.4.1
+- **Versión del contenido:** 1.5.0
 - **Última actualización:** 20/11/2026
 - **Estado:** Borrador ampliable

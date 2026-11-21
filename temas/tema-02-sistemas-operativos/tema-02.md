@@ -10,7 +10,6 @@
 
 - [Presentación HTML — abrir en el navegador](https://htmlpreview.github.io/?https://github.com/bitschips/digitaliza4/blob/main/temas/tema-02-sistemas-operativos/presentaciones/tema-02.html)
 - [Presentación PPTX — descargar](presentaciones/tema-02-sistemas-operativos.pptx)
-- [Actividades](actividades/)
 
 ## Objetivos de aprendizaje
 
@@ -177,6 +176,8 @@ Actualizar el sistema y sus aplicaciones corrige errores y vulnerabilidades. Con
 
 ## 12. Actividades propuestas
 
+**[Abrir el índice de actividades del tema](actividades/README.md)**. Las actividades desarrolladas están en archivos independientes y se incorporarán nuevas actividades a este índice.
+
 1. **Identificar funciones:** relacionar seis acciones (imprimir, guardar, abrir aplicación, conectar Wi-Fi, cambiar usuario, ejecutar dos programas) con funciones del sistema operativo.
 2. **Comparar costes:** elaborar una tabla de tres casos (PC con Windows, PC con Mint, servidor con RHEL) diferenciando licencia, soporte, hardware y mantenimiento.
 3. **Investigar distribuciones:** elegir dos de Mint, Alpine, Debian, RHEL o LliureX y comparar público objetivo, requisitos, escritorio y licencia.
@@ -263,6 +264,6 @@ A veces **Windows deja de arrancar, pero los archivos siguen guardados en el dis
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.2.1
-- **Última actualización:** 20/11/2026
+- **Versión del contenido:** 1.2.2
+- **Última actualización:** 21/11/2026
 - **Estado:** Contenido aprobado y ampliable

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380" role="img" aria-labelledby="title desc">
+<title id="title">Query Key Value simplificados</title><desc id="desc">La consulta Q se compara con claves K para obtener puntuaciones de atención, con las que se combinan los valores V.</desc>
+<rect width="900" height="380" rx="24" fill="#f7fafc"/>
+<text x="450" y="48" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#17324c" text-anchor="middle">Atención: Q, K y V</text>
+<rect x="40" y="104" width="220" height="110" rx="15" fill="#dcecff" stroke="#2a68a4" stroke-width="3"/>
+<rect x="340" y="104" width="220" height="110" rx="15" fill="#fff0d6" stroke="#be8025" stroke-width="3"/>
+<rect x="640" y="104" width="220" height="110" rx="15" fill="#dcf4e7" stroke="#18835a" stroke-width="3"/>
+<g font-family="Arial,sans-serif" text-anchor="middle" fill="#17324c">
+<text x="150" y="146" font-size="30" font-weight="700">Q · Query</text><text x="150" y="182" font-size="19">¿Qué busco?</text>
+<text x="450" y="146" font-size="30" font-weight="700">K · Key</text><text x="450" y="182" font-size="19">¿Con qué encaja?</text>
+<text x="750" y="146" font-size="30" font-weight="700">V · Value</text><text x="750" y="182" font-size="19">¿Qué aporta?</text>
+</g>
+<path d="M262 159 L329 159" stroke="#44596b" stroke-width="4"/><path d="M328 159 l-13 -9 v18 z" fill="#44596b"/>
+<path d="M450 222 V264 H750 V222" stroke="#44596b" stroke-width="3" fill="none" stroke-dasharray="6 6"/>
+<rect x="230" y="279" width="440" height="58" rx="14" fill="#eae9fc" stroke="#605cb7" stroke-width="2"/>
+<text x="450" y="315" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#363270" text-anchor="middle">Ponderar y combinar información</text>
+<text x="450" y="366" font-family="Arial,sans-serif" font-size="16" fill="#536677" text-anchor="middle">Analogía simplificada del cálculo matemático de atención</text>
+</svg>

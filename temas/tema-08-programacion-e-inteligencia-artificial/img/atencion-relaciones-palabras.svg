@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="370" viewBox="0 0 900 370" role="img" aria-labelledby="title desc">
+<title id="title">Ejemplo de relaciones entre palabras</title><desc id="desc">La expresión pesaba mucho se relaciona más con mochila que con suelo en la oración María dejó la mochila en el suelo porque pesaba mucho.</desc>
+<rect width="900" height="370" rx="24" fill="#f7fafc"/>
+<text x="450" y="48" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#17324c" text-anchor="middle">¿Qué pesaba mucho?</text>
+<text x="450" y="87" font-family="Arial,sans-serif" font-size="20" fill="#34495e" text-anchor="middle">María dejó la mochila en el suelo porque pesaba mucho.</text>
+<rect x="85" y="135" width="190" height="63" rx="13" fill="#e5ebf0" stroke="#7b8a97" stroke-width="2"/>
+<text x="180" y="174" font-family="Arial,sans-serif" font-size="24" fill="#243f50" text-anchor="middle">suelo</text>
+<rect x="351" y="135" width="200" height="63" rx="13" fill="#cce9fc" stroke="#237ec0" stroke-width="3"/>
+<text x="451" y="174" font-family="Arial,sans-serif" font-size="24" fill="#16466a" font-weight="700" text-anchor="middle">mochila</text>
+<rect x="640" y="135" width="183" height="63" rx="13" fill="#d9f3e7" stroke="#15835c" stroke-width="3"/>
+<text x="731" y="174" font-family="Arial,sans-serif" font-size="22" fill="#14583f" font-weight="700" text-anchor="middle">pesaba</text>
+<path d="M705 211 Q575 302 453 210" fill="none" stroke="#237ec0" stroke-width="11" stroke-linecap="round"/>
+<path d="M701 222 Q414 342 183 211" fill="none" stroke="#8795a2" stroke-width="3" stroke-dasharray="9 10"/>
+<text x="450" y="321" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#17324c" text-anchor="middle">Relación más relevante: mochila</text>
+<text x="450" y="352" font-family="Arial,sans-serif" font-size="16" fill="#536677" text-anchor="middle">Esquema didáctico: no representa puntuaciones reales del modelo</text>
+</svg>

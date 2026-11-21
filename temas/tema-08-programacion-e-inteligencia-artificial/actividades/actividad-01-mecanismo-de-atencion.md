@@ -25,6 +25,12 @@ Lee cada oración y decide a qué se refiere la expresión destacada. Justifica 
 
 **C.** «Ana puso el helado en la nevera porque **se estaba derritiendo**». ¿Qué se estaba derritiendo: el helado o la nevera?
 
+### Esquema visual: las palabras no tienen todas la misma relación
+
+![Ejemplo visual de atención: la expresión pesaba se relaciona más con mochila que con suelo](../img/atencion-relaciones-palabras.svg)
+
+La flecha gruesa representa una relación que consideramos más relevante en esta frase. **Es una analogía educativa**, no una medición real de los pesos de atención de un modelo.
+
 ## 3. Representa las relaciones
 Elige una frase del ejercicio anterior. Rodea la expresión que debemos interpretar y dibuja flechas hacia las palabras que crees relevantes. Dibuja una flecha más gruesa hacia la palabra que consideres más relacionada. **Este dibujo es una analogía**, no un cálculo real realizado por una IA.
 
@@ -37,6 +43,14 @@ Elige una frase del ejercicio anterior. Rodea la expresión que debemos interpre
 
 ## 5. Explicación científica simplificada
 Los modelos de lenguaje dividen el texto en **tokens**, convierten estos tokens en números y emplean mecanismos matemáticos como la **atención** para combinar información relevante de distintas posiciones del texto. En la atención de tipo *query-key-value*, **Q** representa lo que se busca, **K** ayuda a medir la relación y **V** aporta la información que se combina. La analogía de flechas simplifica mucho el proceso: no equivale a decir que el modelo identifica siempre un referente único ni que entiende como una persona.
+
+### Esquema visual: ¿qué son Q, K y V?
+
+![Esquema simplificado de Query, Key y Value en un mecanismo de atención](../img/atencion-qkv.svg)
+
+En un transformer, las **consultas (Q)** y las **claves (K)** se comparan numéricamente para calcular pesos de atención. Esos pesos se usan para combinar los **valores (V)**. Las preguntas escritas dentro del esquema son ayudas para recordar el concepto, no instrucciones literales de una IA.
+
+**Pregunta extra:** ¿por qué la atención no garantiza que la IA interprete correctamente una frase ambigua?
 
 ## Entrega
 Un documento con las respuestas de las partes 1, 2 y 4 y un dibujo de flechas de la parte 3.

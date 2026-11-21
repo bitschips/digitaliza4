@@ -8,8 +8,9 @@
 
 ## Materiales del tema
 
-- [Actividades](actividades/)
 - [Actividad 1. ¿Cómo relaciona las palabras una inteligencia artificial?](actividades/actividad-01-mecanismo-de-atencion.md)
+- [Actividad 2. Diseña un algoritmo cotidiano](actividades/actividad-02-algoritmos-cotidianos.md)
+- [Actividad 3. Tu primer programa: condiciones y bucles](actividades/actividad-03-programacion-basica.md)
 
 > Las presentaciones HTML y PPTX y el vídeo de apoyo se enlazarán aquí cuando se incorporen al repositorio.
 
@@ -82,9 +83,11 @@ Las respuestas de una IA pueden ser útiles, pero también incorrectas o ambigua
 
 ## 9. Actividades propuestas
 
-1. **Algoritmos cotidianos:** escribir un algoritmo de cinco pasos y representarlo con un diagrama de flujo.
-2. **Programación básica:** crear un pequeño programa con una condición y un bucle.
-3. **[¿Cómo relaciona las palabras una inteligencia artificial?](actividades/actividad-01-mecanismo-de-atencion.md)**: visualizar el vídeo de apoyo, resolver frases ambiguas y dibujar relaciones de atención entre palabras.
+Cada actividad tiene su **enunciado completo** en un archivo independiente de la carpeta `actividades/`:
+
+1. **[¿Cómo relaciona las palabras una inteligencia artificial?](actividades/actividad-01-mecanismo-de-atencion.md)**: visualizar el vídeo de apoyo, resolver frases ambiguas y dibujar relaciones de atención entre palabras.
+2. **[Diseña un algoritmo cotidiano](actividades/actividad-02-algoritmos-cotidianos.md)**: redactar instrucciones precisas, elaborar un diagrama de flujo y realizar pruebas.
+3. **[Tu primer programa: condiciones y bucles](actividades/actividad-03-programacion-basica.md)**: ejecutar, comprender y modificar un programa en Python.
 
 ## 10. Preguntas de repaso
 
@@ -111,6 +114,6 @@ Las respuestas de una IA pueden ser útiles, pero también incorrectas o ambigua
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.0.0
+- **Versión del contenido:** 1.1.0
 - **Última actualización:** 21/11/2026
 - **Estado:** Índice y guía inicial · ampliable

@@ -8,9 +8,11 @@
 
 ## Materiales del tema
 
+- [Actividades del tema — índice y enunciados completos](actividades/README.md)
 - [Actividad 1. ¿Cómo relaciona las palabras una inteligencia artificial?](actividades/actividad-01-mecanismo-de-atencion.md)
 - [Actividad 2. Diseña un algoritmo cotidiano](actividades/actividad-02-algoritmos-cotidianos.md)
 - [Actividad 3. Tu primer programa: condiciones y bucles](actividades/actividad-03-programacion-basica.md)
+- [Actividad 4. ¿Cuántas neuronas hacen falta para dibujar un círculo?](actividades/actividad-04-neuronas-fronteras-2d-3d.md)
 
 > Las presentaciones HTML y PPTX y el vídeo de apoyo se enlazarán aquí cuando se incorporen al repositorio.
 
@@ -88,6 +90,7 @@ Cada actividad tiene su **enunciado completo** en un archivo independiente de la
 1. **[¿Cómo relaciona las palabras una inteligencia artificial?](actividades/actividad-01-mecanismo-de-atencion.md)**: visualizar el vídeo de apoyo, resolver frases ambiguas y dibujar relaciones de atención entre palabras.
 2. **[Diseña un algoritmo cotidiano](actividades/actividad-02-algoritmos-cotidianos.md)**: redactar instrucciones precisas, elaborar un diagrama de flujo y realizar pruebas.
 3. **[Tu primer programa: condiciones y bucles](actividades/actividad-03-programacion-basica.md)**: ejecutar, comprender y modificar un programa en Python.
+4. **[¿Cuántas neuronas hacen falta para dibujar un círculo?](actividades/actividad-04-neuronas-fronteras-2d-3d.md)**: experimentar con entradas X/Y, fronteras de decisión y una representación 3D, mediante tablas y gráficos.
 
 ## 10. Preguntas de repaso
 
@@ -114,6 +117,6 @@ Cada actividad tiene su **enunciado completo** en un archivo independiente de la
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.1.0
+- **Versión del contenido:** 1.1.1
 - **Última actualización:** 21/11/2026
 - **Estado:** Índice y guía inicial · ampliable

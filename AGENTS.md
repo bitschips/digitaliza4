@@ -1,7 +1,7 @@
 # AGENTS.md — Normas y procedimientos del proyecto Digitalización 4.º ESO
 
-> **Versión de estas normas:** 1.6.3  
-> **Última actualización:** 20/11/2026  
+> **Versión de estas normas:** 1.7.0  
+> **Última actualización:** 21/11/2026  
 > **Estado:** Documento vivo; revisar y ampliar cuando cambie el procedimiento.
 
 ## 1. Propósito y alcance
@@ -69,9 +69,39 @@ Al principio de cada `tema-NN.md`, incluir el enlace **Volver al índice general
 
 - **Presentación HTML — abrir en el navegador**: cuando exista, enlazar al visor HTML disponible.
 - **Presentación PPTX — descargar**: cuando exista, enlazar al archivo editable.
-- **Actividades**: enlazar a la carpeta de actividades, o a una actividad individual si se solicita.
+- **Actividades**: NO se colocan en «Materiales del tema». Se enlazan exclusivamente desde el apartado «Actividades propuestas» al final del desarrollo del tema, antes de preguntas de repaso y glosario; desde ahí se abre `actividades/README.md`, con el índice y los enlaces a los enunciados completos.
 
-Evitar enlaces redundantes como **Presentación** y **Carpeta de presentaciones** cuando llevan a la misma ubicación. Usar simplemente **Actividades**, no **Carpeta de actividades**.
+Evitar enlaces redundantes como **Presentación** y **Carpeta de presentaciones** cuando llevan a la misma ubicación. Para el índice de actividades utilizar «Abrir el índice de actividades del tema», únicamente en el apartado «Actividades propuestas».
+
+### Formato unificado de materiales y actividades (decisión del 21/11/2026)
+
+**Aplicación obligatoria a los Temas 1, 2, 8 y a todos los temas nuevos:**
+
+1. Al principio, en **Materiales del tema**, incluir solamente **Presentación HTML**, **Presentación PPTX** y otros recursos complementarios como los creados manualmente con **NotebookLM**. Los enlaces a recursos todavía inexistentes no se inventan; se añaden cuando estén disponibles.
+2. **Nunca poner enlaces a actividades ni el índice de actividades en «Materiales del tema»**.
+3. Tras el desarrollo de contenidos y **antes de las preguntas de repaso y del glosario**, incluir un apartado numerado **«Actividades propuestas»**. Ese apartado contiene un único enlace claramente visible: **[Abrir el índice de actividades del tema](actividades/README.md)**, y puede incluir descripciones breves o una lista de las actividades.
+4. El índice de la carpeta **`actividades/README.md`** enumera las actividades disponibles con enlaces a cada archivo **`actividad-NN-titulo.md`**, que contiene la actividad **desarrollada completamente**, con instrucciones, ejemplos, tablas y esquemas didácticos cuando correspondan. No duplicar en el índice toda la actividad.
+5. Mantener el mismo patrón al crear nuevos temas. **No mover las actividades al encabezado del tema** aunque se incorporen más. La numeración de los apartados puede variar según la extensión de cada tema.
+6. Conservar los enlaces de NotebookLM que aporte el profesor sin modificarlos. Si se crea una actividad nueva, actualizar su índice y el apartado de actividades del tema si procede, sin añadirla a Materiales.
+7. Cuando se modifique el contenido didáctico oficial del tema, respetar la sincronización de presentaciones HTML/PPTX según la sección 7.2; un simple cambio de enlaces o un archivo de actividad independiente no exige alterar contenido de diapositivas.
+
+**Ejemplo de organización:**
+
+```text
+Tema N
+  Materiales del tema
+    Presentación HTML
+    Presentación PPTX
+    NotebookLM (si existe)
+  Objetivos de aprendizaje
+  1. ... contenidos ...
+  N. Actividades propuestas
+    Abrir el índice de actividades del tema -> actividades/README.md
+      Actividad 1 -> actividad-01-....md (enunciado completo)
+      Actividad 2 -> actividad-02-....md (enunciado completo)
+  N+1. Preguntas de repaso
+  N+2. Glosario
+```
 
 ### Preferencia: enlaces en pestaña nueva
 
@@ -297,7 +327,7 @@ La CPU ejecuta instrucciones mediante circuitos.
 3. Editar primero el archivo `tema-NN.md`, conservando enlaces y estructura.
 4. Incrementar su versión de forma proporcionada y actualizar la fecha.
 5. **Siempre que se modifica el contenido pedagógico destinado a diapositivas, generar o actualizar automáticamente HTML y PPTX**, aunque no se solicite de manera expresa. Sincronizar versión, fecha y huella. Respetar pestañas nuevas en HTML.
-6. Si se solicita actividad, guardarla en `actividades/` y añadir un enlace no redundante desde el tema.
+6. Si se solicita actividad, guardarla en `actividades/`, actualizar `actividades/README.md` y enlazar el índice desde el apartado final «Actividades propuestas» del tema, **nunca** desde «Materiales del tema».
 7. Actualizar el enlace del `README.md` **solo cuando se cree el contenido de un tema que antes no existía** o cambie su ruta.
 8. Comprobar las rutas y visualizar/verificar los resultados en la medida que permitan las herramientas.
 9. Resumir exactamente qué se ha publicado, qué se ha conservado y qué queda pendiente. No afirmar que una publicación o Action ha funcionado sin verificarlo.
@@ -343,3 +373,5 @@ Cuando se apruebe una nueva preferencia, añadirla a su sección correspondiente
 | 1.6.1 | 20/11/2026 | Numeración de apartados de automatización como 7.1, 7.2, 7.3 y 7.4 y actualización de referencia interna. |
 | 1.6.2 | 20/11/2026 | Actualización de referencias y enlaces tras renombrar el repositorio a digitaliza4. |
 | 1.6.3 | 20/11/2026 | Renombrar todas las carpetas IMG a img, actualizar referencias y disparadores del generador. |
+
+| 1.7.0 | 21/11/2026 | Unificar todos los temas: presentaciones y NotebookLM en Materiales; actividades al final del desarrollo, con enlace a índice propio y archivos completos. |

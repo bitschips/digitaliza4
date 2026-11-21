@@ -11,7 +11,7 @@
 ### Tema 5. Búsqueda y gestión de información
 ### Tema 6. Organización del entorno digital
 ### Tema 7. Creación de contenidos digitales
-### Tema 8. Programación e inteligencia artificial
+### [Tema 8. Programación e inteligencia artificial](temas/tema-08-programacion-e-inteligencia-artificial/tema-08.md)
 ### Tema 9. Comunicación y colaboración digital
 ### Tema 10. Publicación de contenidos en Internet
 ## Bloque 3. Seguridad y bienestar digital

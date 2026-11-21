@@ -8,13 +8,10 @@
 
 ## Materiales del tema
 
-- [Actividades del tema — índice y enunciados completos](actividades/README.md)
-- [Actividad 1. ¿Cómo relaciona las palabras una inteligencia artificial?](actividades/actividad-01-mecanismo-de-atencion.md)
-- [Actividad 2. Diseña un algoritmo cotidiano](actividades/actividad-02-algoritmos-cotidianos.md)
-- [Actividad 3. Tu primer programa: condiciones y bucles](actividades/actividad-03-programacion-basica.md)
-- [Actividad 4. ¿Cuántas neuronas hacen falta para dibujar un círculo?](actividades/actividad-04-neuronas-fronteras-2d-3d.md)
+- [Presentación HTML — abrir en el navegador](https://htmlpreview.github.io/?https://github.com/bitschips/digitaliza4/blob/main/temas/tema-08-programacion-e-inteligencia-artificial/presentaciones/tema-08.html)
+- [Presentación PPTX — descargar](presentaciones/tema-08-programacion-e-inteligencia-artificial.pptx)
 
-> Las presentaciones HTML y PPTX y el vídeo de apoyo se enlazarán aquí cuando se incorporen al repositorio.
+> Los materiales de NotebookLM se añadirán manualmente cuando estén disponibles.
 
 ## Objetivos de aprendizaje
 
@@ -85,7 +82,7 @@ Las respuestas de una IA pueden ser útiles, pero también incorrectas o ambigua
 
 ## 9. Actividades propuestas
 
-Cada actividad tiene su **enunciado completo** en un archivo independiente de la carpeta `actividades/`:
+**[Abrir el índice de actividades del tema](actividades/README.md)**. Cada actividad tiene su **enunciado completo** en un archivo independiente de la carpeta `actividades/`:
 
 1. **[¿Cómo relaciona las palabras una inteligencia artificial?](actividades/actividad-01-mecanismo-de-atencion.md)**: visualizar el vídeo de apoyo, resolver frases ambiguas y dibujar relaciones de atención entre palabras.
 2. **[Diseña un algoritmo cotidiano](actividades/actividad-02-algoritmos-cotidianos.md)**: redactar instrucciones precisas, elaborar un diagrama de flujo y realizar pruebas.
@@ -117,6 +114,6 @@ Cada actividad tiene su **enunciado completo** en un archivo independiente de la
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.1.1
+- **Versión del contenido:** 1.1.2
 - **Última actualización:** 21/11/2026
 - **Estado:** Índice y guía inicial · ampliable

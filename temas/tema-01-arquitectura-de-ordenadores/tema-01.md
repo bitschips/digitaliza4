@@ -10,7 +10,6 @@
 - [Presentación HTML — abrir en el navegador](https://htmlpreview.github.io/?https://github.com/bitschips/digitaliza4/blob/main/temas/tema-01-arquitectura-de-ordenadores/presentaciones/tema-01.html)
 - [Presentación PPTX — descargar](presentaciones/tema-01-arquitectura-de-ordenadores.pptx)
 - <a href="https://notebooklm.link.google/WchzqtMfSim1" target="_blank">Presentación NotebookLM</a>
-- [Actividades](actividades/)
 
 ## Objetivos de aprendizaje
 
@@ -173,6 +172,8 @@ Las diferencias no son absolutas: existen portátiles, tabletas con teclado y m�
 
 ## 5. Actividades propuestas
 
+**[Abrir el índice de actividades del tema](actividades/README.md)**. Cada actividad desarrollada tiene su enunciado completo en un archivo independiente. Se incorporarán nuevas actividades a este índice conforme se preparen.
+
 1. **Identificación:** elabora un esquema sencillo de un ordenador e identifica CPU, RAM, SSD, placa base y periféricos.
 2. **Investigación:** consulta las especificaciones de un ordenador del aula e indica su procesador, memoria RAM, almacenamiento y sistema operativo.
 3. **Comparación:** compara un ordenador con un teléfono móvil. ¿Qué componentes tienen en común? ¿Qué diferencias encuentras?
@@ -224,6 +225,6 @@ Estas ideas son **ampliaciones opcionales**; no sustituyen los objetivos y conte
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.5.0
-- **Última actualización:** 20/11/2026
+- **Versión del contenido:** 1.5.1
+- **Última actualización:** 21/11/2026
 - **Estado:** Borrador ampliable

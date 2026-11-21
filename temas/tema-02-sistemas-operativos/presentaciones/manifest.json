@@ -1,7 +1,7 @@
 {
-  "source_sha256": "5930399206e5eea5a74fd6b4f2ab431e323ac97fd32ae213d08ccd5d30c2056e",
-  "content_version": "1.2.1",
-  "updated_date": "20/11/2026",
+  "source_sha256": "215ea09c011731d9e2c7e3b8b586411081fb5e28b6d0cec0ab6f9c955111d54c",
+  "content_version": "1.2.2",
+  "updated_date": "21/11/2026",
   "generator_sha256": "620e6076d03ab0bcbc903301669fd11978b130e1355c94476293c82b11e0c056",
   "slides": 43,
   "html": "tema-02.html",

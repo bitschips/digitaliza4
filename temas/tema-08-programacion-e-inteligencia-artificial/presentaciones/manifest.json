@@ -1,9 +1,9 @@
 {
-  "source_sha256": "77b570365fe53524ed3bddb3cdb63ba9735f6b446bbb30e2cbd1abefee6922d2",
-  "content_version": "1.1.1",
+  "source_sha256": "e310143ccbe0bb22c7466e22eed64dc36159a48852b280e7768c5a58145f5dd4",
+  "content_version": "1.2.0",
   "updated_date": "21/11/2026",
   "generator_sha256": "620e6076d03ab0bcbc903301669fd11978b130e1355c94476293c82b11e0c056",
-  "slides": 21,
+  "slides": 23,
   "html": "tema-08.html",
   "pptx": "tema-08-programacion-e-inteligencia-artificial.pptx"
 }

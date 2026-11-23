@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 490" role="img" aria-label="Mediciones ficticias de tensión frente al tiempo y recta de ajuste lineal">
+<rect width="920" height="490" rx="20" fill="#f8fafc"/><text x="36" y="43" font-family="Arial" font-size="26" font-weight="bold" fill="#123052">De las mediciones a la recta aprendida</text>
+<g font-family="Arial" font-size="16" fill="#475569"><text x="28" y="93">Tensión (V)</text><text x="480" y="468" text-anchor="middle">Tiempo (horas)</text></g>
+<g stroke="#cbd5e1" stroke-width="1.5"><path d="M115 95 H825 M115 158 H825 M115 221 H825 M115 284 H825 M115 347 H825 M115 410 H825"/><path d="M115 95 V410 M257 95 V410 M399 95 V410 M541 95 V410 M683 95 V410 M825 95 V410"/></g>
+<g stroke="#475569" stroke-width="2.5"><path d="M115 95 V410 H825"/></g>
+<g font-family="Arial" font-size="16" fill="#334155" text-anchor="end"><text x="102" y="101">1,45</text><text x="102" y="164">1,35</text><text x="102" y="227">1,25</text><text x="102" y="290">1,15</text><text x="102" y="353">1,05</text><text x="102" y="416">0,95</text></g>
+<g font-family="Arial" font-size="16" fill="#334155" text-anchor="middle"><text x="115" y="435">0</text><text x="257" y="435">2</text><text x="399" y="435">4</text><text x="541" y="435">6</text><text x="683" y="435">8</text><text x="825" y="435">10</text></g>
+<!-- y pixel = 95+(1.45-v)*630 -->
+<path d="M115 107.6 L825 272.3" stroke="#ea580c" stroke-width="4" fill="none"/>
+<path d="M115 126.5 L257 139.1 L399 158 L541 183.2 L683 221 L825 302.9" stroke="#2563eb" stroke-width="3" fill="none" stroke-dasharray="7 6"/>
+<g fill="#2563eb" stroke="white" stroke-width="2.5"><circle cx="115" cy="126.5" r="8"/><circle cx="257" cy="139.1" r="8"/><circle cx="399" cy="158" r="8"/><circle cx="541" cy="183.2" r="8"/><circle cx="683" cy="221" r="8"/><circle cx="825" cy="302.9" r="8"/></g>
+<g font-family="Arial" font-size="17"><circle cx="525" cy="69" r="7" fill="#2563eb"/><text x="540" y="75" fill="#334155">Mediciones ficticias</text><path d="M710 69 H744" stroke="#ea580c" stroke-width="4"/><text x="753" y="75" fill="#334155">Recta estimada</text></g>
+<text x="150" y="385" font-family="Arial" font-size="16" fill="#475569">La recta es una aproximación: no pasa por todos los puntos.</text>
+</svg>

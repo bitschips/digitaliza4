@@ -7,6 +7,12 @@
 
 [Volver al tema 8](../tema-08.md) · [Volver al índice de actividades](README.md)
 
+## Cuaderno interactivo en Google Colab
+
+**[Abrir el código completo en Google Colab](https://colab.research.google.com/github/bitschips/digitaliza4/blob/main/temas/tema-08-programacion-e-inteligencia-artificial/actividades/actividad-05-descarga-bateria-tensorflow.ipynb)**. El cuaderno contiene los **siete bloques de Python** de esta actividad, separados por pasos y preparados para ejecutar en orden, sin copiar ni pegar. Pulsa el botón ▶ de cada celda. Para conservar tus cambios, utiliza **Archivo → Guardar una copia en Drive**. Si Colab pregunta si confías en el cuaderno, revisa el código antes de ejecutarlo.
+
+[Ver o descargar el archivo .ipynb](actividad-05-descarga-bateria-tensorflow.ipynb).
+
 ## Objetivos
 
 - Comprender que el **tiempo es una entrada (X)** y la **tensión es la salida deseada (Y)**.

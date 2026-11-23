@@ -2,7 +2,7 @@
 
 **Materia:** Digitalización · 4.º ESO · Comunitat Valenciana  
 **Estado:** Índice y guía inicial · contenido ampliable  
-**Fecha:** 21/11/2026
+**Fecha:** 23/11/2026
 
 [Volver al índice general](../../README.md)
 
@@ -116,6 +116,7 @@ Las respuestas de una IA pueden ser útiles, pero también incorrectas o ambigua
 2. **[Diseña un algoritmo cotidiano](actividades/actividad-02-algoritmos-cotidianos.md)**: redactar instrucciones precisas, elaborar un diagrama de flujo y realizar pruebas.
 3. **[Tu primer programa: condiciones y bucles](actividades/actividad-03-programacion-basica.md)**: ejecutar, comprender y modificar un programa en Python.
 4. **[¿Cuántas neuronas hacen falta para dibujar un círculo?](actividades/actividad-04-neuronas-fronteras-2d-3d.md)**: experimentar con entradas X/Y, fronteras de decisión y una representación 3D, mediante tablas y gráficos.
+5. **[¿Puede una neurona predecir la descarga de una batería?](actividades/actividad-05-prediccion-descarga-bateria-tensorflow.md)**: introducir datos de tiempo y tensión, entrenar una neurona lineal con TensorFlow, dibujar la recta y comparar épocas y predicciones.
 
 ## 10. Preguntas de repaso
 
@@ -142,6 +143,6 @@ Las respuestas de una IA pueden ser útiles, pero también incorrectas o ambigua
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.2.0
-- **Última actualización:** 21/11/2026
+- **Versión del contenido:** 1.3.0
+- **Última actualización:** 23/11/2026
 - **Estado:** Índice y guía inicial · ampliable

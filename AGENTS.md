@@ -1,7 +1,7 @@
 # AGENTS.md — Normas y procedimientos del proyecto Digitalización 4.º ESO
 
-> **Versión de estas normas:** 1.7.0  
-> **Última actualización:** 21/11/2026  
+> **Versión de estas normas:** 1.7.1  
+> **Última actualización:** 23/11/2026  
 > **Estado:** Documento vivo; revisar y ampliar cuando cambie el procedimiento.
 
 ## 1. Propósito y alcance
@@ -102,6 +102,17 @@ Tema N
   N+1. Preguntas de repaso
   N+2. Glosario
 ```
+
+### Regla estricta: las actividades no generan presentaciones (23/11/2026)
+
+**HTML y PPTX son exclusivamente presentaciones del contenido teórico del tema; los enunciados, códigos, imágenes y ejercicios desarrollados en `actividades/` no forman parte de sus diapositivas.** Añadir, corregir o eliminar una actividad **no debe activar GitHub Actions ni crear o regenerar presentaciones**.
+
+- Guardar las actividades y sus imágenes propias dentro de `temas/tema-NN-.../actividades/` (por ejemplo, `actividades/img/`), **no en `img/` del tema**, porque esa ruta sí activa actualmente la Action.
+- Cuando ya existe el enlace `actividades/README.md` desde «Actividades propuestas», **actualizar solo** `actividades/README.md` y los archivos de la actividad. **No editar `tema-NN.md`** para añadir cada actividad ni incrementar por ello la versión del tema principal.
+- La sección «Actividades propuestas» de `tema-NN.md` debe limitarse al enlace al índice; los detalles y la enumeración actualizada pertenecen únicamente a `actividades/README.md`.
+- La automatización de diapositivas debe **ignorar** `actividades/**` y las variaciones de la sección «Actividades propuestas» del archivo principal. La simple modificación de enlaces o metadatos no debe alterar la huella de las diapositivas.
+- **Única excepción:** si el docente pide explícitamente incorporar una explicación al **contenido teórico** del tema, editar `tema-NN.md` y sincronizar ambas presentaciones por ese cambio teórico, nunca por el enunciado de la actividad.
+- **Matiz técnico:** el workflow vigente escucha `temas/**/img/**` y `temas/**/tema-*.md`; guardar una imagen de actividad en `img/` o modificar `tema-NN.md` puede lanzar la Action aunque no corresponda. Evitar ambas rutas en las altas ordinarias de actividades.
 
 ### Preferencia: enlaces en pestaña nueva
 
@@ -375,3 +386,4 @@ Cuando se apruebe una nueva preferencia, añadirla a su sección correspondiente
 | 1.6.3 | 20/11/2026 | Renombrar todas las carpetas IMG a img, actualizar referencias y disparadores del generador. |
 
 | 1.7.0 | 21/11/2026 | Unificar todos los temas: presentaciones y NotebookLM en Materiales; actividades al final del desarrollo, con enlace a índice propio y archivos completos. |
+| 1.7.1 | 23/11/2026 | Separar estrictamente actividades y presentaciones: no modificar tema-NN.md por nuevas actividades, mantener las imágenes en actividades/img y excluir las actividades de los disparadores y del contenido de diapositivas. |

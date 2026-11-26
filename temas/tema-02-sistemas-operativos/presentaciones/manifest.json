@@ -1,9 +1,9 @@
 {
-  "source_sha256": "62c8cbcb9b5c79a2286ab3240a8d956fd5215c4e9ceccf42e047eadaf5e67d5e",
-  "content_version": "1.3.0",
+  "source_sha256": "407a05b917ed8b35537c00f4ccf4b9688b8b0703adf3f35cd288498ea4a3cb42",
+  "content_version": "1.4.0",
   "updated_date": "26/11/2026",
   "generator_sha256": "620e6076d03ab0bcbc903301669fd11978b130e1355c94476293c82b11e0c056",
-  "slides": 61,
+  "slides": 65,
   "html": "tema-02.html",
   "pptx": "tema-02-sistemas-operativos.pptx"
 }

@@ -1,6 +1,6 @@
 # Tema 1. Arquitectura de ordenadores
 
-**Materia:** Digitalización · 4.º ESO · Comunitat Valenciana  
+**Materia:** Digitalización  
 **Estado:** Borrador didáctico ampliable
 
 [Volver al índice general](../../README.md)

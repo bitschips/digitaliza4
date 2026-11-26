@@ -10,6 +10,7 @@
 
 - [Presentación HTML — abrir en el navegador](https://htmlpreview.github.io/?https://github.com/bitschips/digitaliza4/blob/main/temas/tema-02-sistemas-operativos/presentaciones/tema-02.html)
 - [Presentación PPTX — descargar](presentaciones/tema-02-sistemas-operativos.pptx)
+- [Presentación NotebookLM]()
 
 ## Objetivos de aprendizaje
 

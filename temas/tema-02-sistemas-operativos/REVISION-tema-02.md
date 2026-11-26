@@ -1,6 +1,6 @@
 # Tema 2. Sistemas operativos — contenido para revisión
 
-**Materia:** Digitalización · 4.º ESO · Comunitat Valenciana  
+**Materia:** Digitalización  
 **Estado:** Borrador completo para revisión docente; todavía no aprobado para generar presentaciones  
 **Fecha:** 20/11/2026
 
@@ -120,16 +120,16 @@ Un **archivo** almacena información; una **carpeta o directorio** permite organ
 | **Alpine Linux** | Sistema minimalista, contenedores y servidores | Muy ligera en configuraciones mínimas; no es un escritorio completo listo para principiantes | Gratuito y de código abierto | [alpinelinux.org/downloads](https://alpinelinux.org/downloads/) |
 | **Debian** | Escritorio y servidor; gran variedad de paquetes | Depende del escritorio instalado; puede ser muy ligera | Gratuito; soporte de terceros opcional | [debian.org/distrib](https://www.debian.org/distrib/) |
 | **Red Hat Enterprise Linux (RHEL)** | Empresas y servidores profesionales | Depende de la configuración | Suscripciones comerciales; existen condiciones de acceso sin coste para determinados desarrolladores y usos | [redhat.com](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux) |
-| **LliureX** | Entorno educativo valenciano | Depende del equipo y edición | Descarga y utilización gratuitas | [lliurex.net](https://portal.edu.gva.es/lliurex/) |
+| **LliureX** | Entorno educativo | Depende del equipo y edición | Descarga y utilización gratuitas | LliureX |
 
-**Aclaraciones:** Linux Mint no es necesariamente la distribución más ligera: Alpine es más minimalista, pero más compleja para principiantes. Debian con un entorno ligero también puede ser adecuada para ordenadores modestos. LliureX es la distribución educativa de la Comunitat Valenciana. Los requisitos de RAM, CPU y espacio dependen de la versión y deben consultarse en sus páginas oficiales antes de una instalación.
+**Aclaraciones:** Linux Mint no es necesariamente la distribución más ligera: Alpine es más minimalista, pero más compleja para principiantes. Debian con un entorno ligero también puede ser adecuada para ordenadores modestos. LliureX es una distribución Linux educativa. Los requisitos de RAM, CPU y espacio dependen de la versión y deben consultarse en sus páginas oficiales antes de una instalación.
 
 ### 8.1. Elegir una distribución según el equipo
 
 - Para **empezar con un PC doméstico o de clase**: Linux Mint o LliureX, si cumplen los requisitos.
 - Para **un equipo antiguo**: una distribución con escritorio ligero (por ejemplo Mint Xfce o Debian con Xfce/LXQt), comprobando RAM y compatibilidad.
 - Para **servidores y proyectos técnicos**: Debian, Alpine o Red Hat según necesidades de administración y soporte.
-- Para **un centro educativo valenciano**: investigar el papel de LliureX y sus recursos educativos.
+- Para **un centro educativo**: investigar el papel de LliureX y sus recursos educativos.
 
 **No confundir:** poder descargar gratis una imagen ISO no garantiza que todos los servicios profesionales de una distribución sean gratuitos.
 

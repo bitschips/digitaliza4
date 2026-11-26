@@ -88,7 +88,7 @@ def clean(text: str) -> str:
 def parse_slides(text: str, number: int, title: str) -> list[dict]:
     """Transforma todos los apartados del contenido en diapositivas de tamaño legible."""
     soup = BeautifulSoup(markdown.markdown(text, extensions=["tables", "fenced_code"]), "html.parser")
-    slides = [{"title": f"Tema {number}. {title}", "subtitle": "Digitalización · 4.º ESO",
+    slides = [{"title": f"Tema {number}. {title}", "subtitle": "Digitalización",
                "kind": "cover", "items": ["Contenidos, ejemplos y actividades del tema"]}]
     heading = title
     items: list[str] = []
@@ -187,14 +187,14 @@ def write_pptx(path: Path, slides: list[dict], version: str, date: str, digest: 
     prs.slide_width, prs.slide_height = Inches(13.333), Inches(7.5)
     prs.core_properties.title = slides[0]["title"]
     prs.core_properties.subject = f"Versión {version} · Fuente {digest[:12]}"
-    prs.core_properties.keywords = f"Digitalización 4 ESO; {version}; {date}; {digest}"
+    prs.core_properties.keywords = f"Digitalización; {version}; {date}; {digest}"
     for index, data in enumerate(slides, 1):
         slide = prs.slides.add_slide(prs.slide_layouts[6])
         is_cover = data["kind"] == "cover"
         pptx_box(slide, 0, 0, 13.333, 7.5, COLORS["navy"] if is_cover else COLORS["paper"], False)
         pptx_box(slide, .26, .3, .09, 6.8, COLORS["teal"], False)
         fg = COLORS["white"] if is_cover else COLORS["navy"]
-        pptx_text(slide, "DIGITALIZACIÓN  ·  4.º ESO", .75, .38, 9.2, .35, 12, True,
+        pptx_text(slide, "DIGITALIZACIÓN", .75, .38, 9.2, .35, 12, True,
                   COLORS["white"] if is_cover else COLORS["teal"])
         heading = data["title"]
         pptx_text(slide, heading, .75, 1.12 if is_cover else .93, 11.7, 1.05, 36 if is_cover else 29, True, fg)
@@ -302,7 +302,7 @@ def write_html(path: Path, slides: list[dict], version: str, date: str, digest: 
 <meta name="content-version" content="{version}"><meta name="updated-date" content="{date_iso}">
 <meta name="source-sha256" content="{digest}"><meta name="generator-sha256" content="{SCRIPT_SHA}">
 <title>{html.escape(slides[0]["title"])} · Presentación HTML</title><style>{CSS}</style></head>
-<body><div class="shell"><header class="top"><span>Digitalización · 4.º ESO · v{version}</span><a target="_blank" rel="noopener noreferrer" href="../tema-01.md" id="source">Consultar apuntes ↗</a></header>
+<body><div class="shell"><header class="top"><span>Digitalización · v{version}</span><a target="_blank" rel="noopener noreferrer" href="../tema-01.md" id="source">Consultar apuntes ↗</a></header>
 <main class="stage" id="stage" aria-label="Presentación del tema">{''.join(sections)}</main>
 <div class="meter"><div id="progress"></div></div>
 <nav class="controls" aria-label="Control de diapositivas"><button id="prev" type="button">← Anterior</button>

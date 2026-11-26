@@ -1,6 +1,6 @@
 # Tema 8. Programación e inteligencia artificial
 
-**Materia:** Digitalización · 4.º ESO · Comunitat Valenciana  
+**Materia:** Digitalización  
 **Estado:** Índice y guía inicial · contenido ampliable  
 **Fecha:** 23/11/2026
 

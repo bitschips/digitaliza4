@@ -192,61 +192,51 @@ Un **archivo** almacena información; una **carpeta o directorio** permite organ
 
 **Actividad:** crear una estructura con carpetas `Digitalizacion/Tema2/Practicas`, guardar un archivo de texto y localizar su ruta.
 
-## 8. Distribuciones GNU/Linux
+## 8. Distribuciones GNU/Linux y descarga de sistemas operativos
 
-**Linux** es el nombre del núcleo. Una **distribución GNU/Linux** reúne ese núcleo con utilidades, programas, sistema de instalación, actualizaciones y, en muchos casos, un escritorio. No todas las distribuciones incluyen los mismos componentes ni requieren los mismos recursos.
+**Linux** es el nombre de un núcleo (*kernel*). Una **distribución GNU/Linux** reúne el núcleo con programas, herramientas de instalación, actualizaciones y, en muchos casos, un escritorio. Algunas distribuciones están orientadas al uso cotidiano; otras, a servidores o equipos con pocos recursos.
 
-| Distribución | Enfoque principal | Ligereza | Coste de uso / soporte | Descarga oficial |
-|---|---|---|---|---|
-| **Linux Mint** | Escritorio sencillo para quien empieza | Edición Xfce relativamente ligera; Cinnamon suele requerir más recursos | Uso gratuito; donaciones voluntarias | [linuxmint.com/download.php](https://linuxmint.com/download.php) |
-| **Alpine Linux** | Sistema minimalista, contenedores y servidores | Muy ligera en configuraciones mínimas; no es un escritorio completo listo para principiantes | Gratuito y de código abierto | [alpinelinux.org/downloads](https://alpinelinux.org/downloads/) |
-| **Debian** | Escritorio y servidor; gran variedad de paquetes | Depende del escritorio instalado; puede ser muy ligera | Gratuito; soporte de terceros opcional | [debian.org/distrib](https://www.debian.org/distrib/) |
-| **Red Hat Enterprise Linux (RHEL)** | Empresas y servidores profesionales | Depende de la configuración | Suscripciones comerciales; existen condiciones de acceso sin coste para determinados desarrolladores y usos | [redhat.com](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux) |
-| **LliureX** | Entorno educativo valenciano | Depende del equipo y edición | Descarga y utilización gratuitas | [lliurex.net](https://portal.edu.gva.es/lliurex/) |
+### 8.1. Comparación y enlaces oficiales de descarga
 
-**Aclaraciones:** Linux Mint no es necesariamente la distribución más ligera: Alpine es más minimalista, pero más compleja para principiantes. Debian con un entorno ligero también puede ser adecuada para ordenadores modestos. LliureX es la distribución educativa de la Comunitat Valenciana. Los requisitos de RAM, CPU y espacio dependen de la versión y deben consultarse en sus páginas oficiales antes de una instalación.
+Esta tabla reúne en un solo lugar las distribuciones estudiadas y los **enlaces a sus páginas oficiales de descarga**. También incluye Windows 11 para comparar un sistema propietario con las alternativas GNU/Linux. Las páginas pueden ofrecer distintas ediciones, arquitecturas e imágenes ISO.
 
-### 8.1. Elegir una distribución según el equipo
+| Sistema | Uso recomendado y características | Coste, requisitos y observaciones | Descarga oficial |
+|---|---|---|---|
+| **Linux Mint** | Escritorio sencillo para iniciarse en Linux; Cinnamon, MATE o Xfce. | Descarga gratuita. Xfce suele consumir menos recursos que Cinnamon; comprobar requisitos. | [Linux Mint — Descargas](https://www.linuxmint.com/download.php) |
+| **Debian GNU/Linux** | PC, servidores y educación; configurable con distintos escritorios. | Descarga gratuita. Ofrece imágenes de instalación (*netinst*) y opciones Live; requisitos según edición. | [Debian — Descargar e instalar](https://www.debian.org/distrib/) |
+| **Alpine Linux** | Distribución minimalista para servidores, contenedores y proyectos técnicos. | Gratuita y muy ligera en configuraciones mínimas, pero no es un escritorio listo para principiantes. | [Alpine Linux — Downloads](https://alpinelinux.org/downloads/) |
+| **Ubuntu Desktop** | Ordenadores personales y portátiles; versiones LTS con soporte prolongado. | Descarga gratuita; comprobar los requisitos de la edición y la arquitectura. | [Ubuntu — Download Desktop](https://ubuntu.com/download/desktop) |
+| **Fedora Workstation** | Escritorio moderno con tecnologías actuales; permite probar el sistema en modo Live. | Descarga gratuita; comprobar requisitos del equipo. | [Fedora — Descargar Workstation](https://fedoraproject.org/workstation/download/) |
+| **LliureX** | Distribución educativa de la Comunitat Valenciana, adaptada a centros y aulas. | Descarga gratuita; consultar los requisitos y las versiones disponibles. | [LliureX — Portal oficial](https://portal.edu.gva.es/lliurex/) |
+| **Red Hat Enterprise Linux (RHEL)** | Servidores y empresas con necesidades de administración y soporte. | Distribución comercial con suscripciones; existen modalidades de acceso gratuito para usos específicos. | [Red Hat — Información y descarga](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux) |
+| **Windows 11** | PC, portátiles, aplicaciones comerciales y videojuegos. | La ISO se puede descargar desde Microsoft; para utilizarlo y activarlo se necesita una licencia válida y hardware compatible. | [Microsoft — Descargar Windows 11 (ISO)](https://www.microsoft.com/es-es/software-download/windows11) |
 
-- Para **empezar con un PC doméstico o de clase**: Linux Mint o LliureX, si cumplen los requisitos.
-- Para **un equipo antiguo**: una distribución con escritorio ligero (por ejemplo Mint Xfce o Debian con Xfce/LXQt), comprobando RAM y compatibilidad.
-- Para **servidores y proyectos técnicos**: Debian, Alpine o Red Hat según necesidades de administración y soporte.
-- Para **un centro educativo valenciano**: investigar el papel de LliureX y sus recursos educativos.
+**¿Cuál elegir según el equipo?**
 
-**No confundir:** poder descargar gratis una imagen ISO no garantiza que todos los servicios profesionales de una distribución sean gratuitos.
+- **Primer contacto con Linux:** Linux Mint o Ubuntu; en centros valencianos, también LliureX si el equipo es compatible.
+- **Ordenador antiguo:** Mint Xfce o Debian con un escritorio ligero, comprobando siempre la RAM y los controladores.
+- **Servidor o proyecto técnico:** Debian o Alpine; RHEL si se requiere soporte empresarial.
+- **PC con Windows:** Windows 11 solo si cumple sus requisitos; su ISO se descarga desde la web de Microsoft.
+
+**No confundir:** poder descargar gratis una ISO no significa que todas las licencias o servicios sean gratuitos. Tampoco una distribución ligera garantiza que funcione en cualquier ordenador.
 
 <!-- IMAGEN: img/distribuciones-linux.svg | TITULO: Distribuciones GNU/Linux | POSICION: DESPUES -->
 
-## 9. Descarga e instalación de sistemas operativos
+### 8.2. ¿Qué es una ISO y cómo se utiliza?
 
-Una **imagen ISO** es un archivo que contiene una imagen de un soporte de instalación o arranque. Se debe descargar desde la **web oficial**, seleccionar la versión y arquitectura compatibles, leer los requisitos y, cuando sea posible, verificar la suma de comprobación (SHA-256) publicada.
+Una **imagen ISO** es un archivo que contiene una imagen de un soporte de instalación o arranque. Para conseguir una, entra en uno de los **enlaces oficiales de la tabla**, elige una edición y una arquitectura compatibles con tu equipo (por ejemplo, **x86-64/amd64**) y lee sus requisitos.
 
-### 9.1. Páginas oficiales para descargar imágenes ISO
+1. **Descarga la ISO**, sin confundir la descarga con la instalación.
+2. **Comprueba su integridad**, cuando el proyecto publique una suma de comprobación SHA-256 y sus instrucciones de verificación.
+3. **Prueba el sistema** en una máquina virtual o crea un USB arrancable si la imagen permite hacerlo; copiar el fichero `.iso` como un documento normal no suele crear un USB de arranque.
+4. Si el sistema ofrece un **modo Live**, puedes explorarlo antes de instalarlo. No todas las imágenes o distribuciones ofrecen el mismo modo de prueba.
+5. **Antes de instalar**, realiza una copia de seguridad y pide autorización: el instalador podría modificar particiones y borrar archivos.
 
-Para descargar un sistema operativo, **entra en la web oficial del proyecto**, elige una edición y una arquitectura compatibles con tu equipo (por ejemplo, **x86-64/amd64**) y busca la imagen **ISO**. Los enlaces siguientes llevan a las páginas oficiales de descarga, no a archivos de versión fija, para que sigan siendo útiles cuando se publiquen nuevas versiones.
+**Ejemplo:** en la página de Windows 11 hay que localizar la opción para descargar una imagen de disco (ISO). En Debian, Mint, Ubuntu y Fedora se debe elegir la imagen adecuada para el equipo y, si interesa practicar sin instalar, una versión que permita probar el sistema.
 
-| Sistema operativo | Página oficial de descarga | ¿Por qué es interesante? |
-|---|---|---|
-| **Windows 11** | [Microsoft — Descargar Windows 11 (ISO)](https://www.microsoft.com/es-es/software-download/windows11) | Sistema habitual en muchos PC. En la web, buscar «Descargar una imagen de disco (archivo ISO) de Windows 11». Requiere hardware compatible y una licencia válida para su activación. |
-| **Debian GNU/Linux** | [Debian — Descargar e instalar](https://www.debian.org/distrib/) | Distribución estable, utilizada en ordenadores y servidores. Se puede elegir una ISO de instalación pequeña (*netinst*) o una imagen **Live** para probar el escritorio. |
-| **Linux Mint** | [Linux Mint — Descargas](https://www.linuxmint.com/download.php) | Adecuada para empezar a utilizar Linux; permite elegir escritorios como Cinnamon, MATE o Xfce según preferencias y requisitos. |
-| **Alpine Linux** | [Alpine Linux — Downloads](https://alpinelinux.org/downloads/) | Distribución ligera, frecuente en servidores y contenedores. Su instalación y uso suelen requerir más conocimientos; no es un escritorio gráfico completo listo para principiantes. |
-| **Ubuntu Desktop** | [Ubuntu — Download Desktop](https://ubuntu.com/download/desktop) | Distribución muy conocida para PC y portátiles; ofrece versiones **LTS** con soporte prolongado y una sesión de prueba desde USB. |
-| **Fedora Workstation** | [Fedora — Descargar Workstation](https://fedoraproject.org/workstation/download/) | Distribución de escritorio con tecnologías actuales; permite descargar una ISO **Live** y probarla antes de instalar. |
+**Actividad breve de investigación:** elige dos sistemas de la tabla, localiza la descarga para un ordenador de 64 bits, comprueba si ofrecen modo Live y explica cuál sería más adecuado para un ordenador del aula. **No es necesario descargar ni instalar nada para completar esta investigación.**
 
-**Importante para el alumnado:**
-
-1. **Descargar una ISO no instala el sistema operativo**: primero se guarda un archivo en el ordenador.
-2. Para utilizarla hay que crear un **USB arrancable** o cargarla en una **máquina virtual**. No basta con copiar el archivo ISO a una memoria USB común.
-3. Comprueba los **requisitos mínimos**, la arquitectura de la CPU y, si el proyecto la ofrece, la **suma SHA-256** de la descarga.
-4. Si únicamente quieres experimentar, usa un **sistema Live** o una máquina virtual en vez de modificar un disco con archivos personales.
-5. Descargar Windows 11 es distinto de disponer de una licencia válida para activarlo. Las distribuciones GNU/Linux de la tabla pueden descargarse gratuitamente.
-
-**Actividad breve de investigación:** elige dos sistemas de la tabla, localiza en sus webs oficiales el enlace a una ISO para PC de 64 bits, anota si existe modo Live y explica cuál probarías primero en un ordenador del aula. **No es necesario descargar ni instalar nada para completar esta actividad.**
-
-En una instalación normal, el asistente puede crear o modificar particiones y **borrar archivos**. Por eso no se debe instalar un sistema sobre un ordenador que contenga datos importantes sin autorización y copia de seguridad. Para practicar, se puede usar una máquina virtual o arrancar un USB en modo Live.
-
-## 10. Crear un USB de arranque desde Linux y utilizarlo en modo Live
+## 9. Crear un USB de arranque desde Linux y utilizarlo en modo Live
 
 **Objetivo:** arrancar temporalmente un ordenador con Linux desde una memoria USB, sin instalarlo, para conocer el sistema o intentar acceder a archivos de un ordenador cuyo sistema habitual no arranca.
 
@@ -268,11 +258,11 @@ En una instalación normal, el asistente puede crear o modificar particiones y *
 
 <!-- IMAGEN: img/recuperacion-archivos-linux.svg | TITULO: Recuperación de archivos de Windows con Linux Live | POSICION: DESPUES -->
 
-## 11. Actualizaciones, mantenimiento y seguridad
+## 10. Actualizaciones, mantenimiento y seguridad
 
 Actualizar el sistema y sus aplicaciones corrige errores y vulnerabilidades. Conviene usar fuentes oficiales, realizar copias de seguridad, proteger las contraseñas, limitar los permisos de administrador y reconocer mensajes sospechosos. Un equipo sin actualizaciones de seguridad es más vulnerable, independientemente de que utilice Windows, Linux o macOS.
 
-## 12. Actividades propuestas
+## 11. Actividades propuestas
 
 **[Abrir el índice de actividades del tema](actividades/README.md)**. Las actividades desarrolladas están en archivos independientes y se incorporarán nuevas actividades a este índice.
 
@@ -282,7 +272,7 @@ Actualizar el sistema y sus aplicaciones corrige errores y vulnerabilidades. Con
 4. **Archivos y terminal:** crear, localizar y mostrar el contenido de una carpeta de pruebas desde la interfaz gráfica y el terminal.
 5. **USB Live:** preparar un USB con una ISO oficial y practicar el arranque en un equipo autorizado, sin instalar ni modificar sus discos.
 
-## 13. Preguntas de repaso
+## 12. Preguntas de repaso
 
 1. ¿Por qué el sistema operativo no es lo mismo que una aplicación?
 2. ¿Qué función tienen el kernel, la RAM y los controladores?
@@ -296,7 +286,7 @@ Actualizar el sistema y sus aplicaciones corrige errores y vulnerabilidades. Con
 10. ¿En qué se diferencian iOS, iPadOS y macOS?
 11. ¿Se puede instalar Android en cualquier portátil? ¿Por qué?
 
-## 14. Glosario
+## 13. Glosario
 
 - **Sistema operativo:** software base que coordina recursos y permite ejecutar aplicaciones.
 - **Kernel o núcleo:** componente central del sistema operativo.
@@ -317,11 +307,11 @@ Actualizar el sistema y sus aplicaciones corrige errores y vulnerabilidades. Con
 
 <!-- PRESENTACION:EXCLUIR -->
 
-## 15. Ampliación opcional: casos reales de uso y mantenimiento cotidiano
+## 14. Ampliación opcional: casos reales de uso y mantenimiento cotidiano
 
 Este apartado complementa el temario básico y **no se incorpora automáticamente a las presentaciones**. Conecta el funcionamiento de los sistemas operativos con situaciones que pueden surgir en casa o en el aula.
 
-### 15.1. ¿Qué ocurre al encender un ordenador?
+### 14.1. ¿Qué ocurre al encender un ordenador?
 
 1. Al pulsar el botón de encendido, el equipo comienza a alimentar sus componentes.
 2. El firmware **UEFI/BIOS** comprueba e inicializa parte del hardware y localiza un dispositivo de arranque.
@@ -331,31 +321,31 @@ Este apartado complementa el temario básico y **no se incorpora automáticament
 
 **Relación con el Tema 1:** la CPU ejecuta instrucciones, el almacenamiento contiene el sistema y la RAM permite cargar los programas en funcionamiento.
 
-### 15.2. Máquinas virtuales: dos sistemas operativos en un equipo
+### 14.2. Máquinas virtuales: dos sistemas operativos en un equipo
 
 Una **máquina virtual** es un ordenador simulado mediante software. Herramientas como VirtualBox permiten, en equipos compatibles y con recursos suficientes, probar un sistema operativo invitado (por ejemplo, Debian) dentro de otro anfitrión (por ejemplo, Windows o Linux), sin reemplazar el sistema original.
 
 **Ejemplo:** arrancar Debian en una ventana, practicar con carpetas y apagar la máquina virtual. Necesita RAM, CPU y almacenamiento propios asignados y un archivo ISO o disco virtual. No confundir una máquina virtual con arrancar un USB Live.
 
-### 15.3. Dar una segunda vida a un ordenador antiguo
+### 14.3. Dar una segunda vida a un ordenador antiguo
 
 En un equipo con poca RAM o procesador modesto puede ser útil una distribución con entorno de escritorio ligero, como Debian con LXQt/Xfce o Linux Mint Xfce. **No todos los sistemas Linux consumen menos que Windows**: el resultado depende de la versión, el escritorio, los servicios, los controladores y las aplicaciones abiertas.
 
 **Actividad propuesta:** anotar procesador, RAM y almacenamiento de un ordenador y comparar los requisitos oficiales de varias distribuciones. Hablar también del ahorro económico y de la reducción de residuos electrónicos por reutilización.
 
-### 15.4. ¿Qué hacer cuando una aplicación se bloquea?
+### 14.4. ¿Qué hacer cuando una aplicación se bloquea?
 
 El sistema operativo gestiona procesos y puede ayudar a identificar un programa que no responde. En Windows puede utilizarse el **Administrador de tareas**; en Linux, el **Monitor del sistema** o herramientas equivalentes. Antes de finalizar una aplicación es conveniente intentar guardar el trabajo; cerrar a la fuerza puede hacer perder cambios sin guardar.
 
 **Práctica:** abrir dos aplicaciones, consultar su consumo aproximado de CPU y memoria, y describir las diferencias sin forzar bloqueos reales.
 
-### 15.5. Privacidad y permisos
+### 14.5. Privacidad y permisos
 
 Los sistemas operativos ofrecen configuraciones relacionadas con ubicación, cámara, micrófono, actualizaciones y datos de diagnóstico. Algunas funciones y servicios pueden recopilar información según las opciones activadas y las políticas del proveedor.
 
 **Práctica:** revisar los permisos de una aplicación de ejemplo sin modificar cuentas ajenas ni compartir información personal.
 
-### 15.6. Recuperar archivos cuando Windows no arranca
+### 14.6. Recuperar archivos cuando Windows no arranca
 
 A veces **Windows deja de arrancar, pero los archivos siguen guardados en el disco**. Un USB con una distribución Linux en modo Live puede permitir acceder a ellos y copiarlos a otra unidad, siempre que el almacenamiento sea legible y se disponga de las credenciales o claves necesarias. **Rescatar archivos no equivale a reparar Windows.**
 
@@ -367,6 +357,6 @@ A veces **Windows deja de arrancar, pero los archivos siguen guardados en el dis
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.4.0
+- **Versión del contenido:** 1.5.0
 - **Última actualización:** 26/11/2026
 - **Estado:** Contenido aprobado y ampliable

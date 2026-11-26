@@ -2,7 +2,7 @@
 
 **Materia:** Digitalización · 4.º ESO · Comunitat Valenciana  
 **Estado:** Contenido aprobado · material ampliable  
-**Fecha:** 20/11/2026
+**Fecha:** 26/11/2026
 
 [Volver al índice general](../../README.md)
 
@@ -78,6 +78,80 @@ Para comparar costes hay que distinguir **precio de la licencia**, **coste del e
 **Actividad breve:** ¿qué opción elegirías para diez ordenadores antiguos de un aula y por qué? Razona el coste total, no solo la descarga.
 
 <!-- IMAGEN: img/comparacion-sistemas-operativos.svg | TITULO: Sistemas operativos en distintos dispositivos | POSICION: DESPUES -->
+
+### 4.2. Sistemas operativos móviles: Android, iOS y su relación con el ordenador
+
+Los sistemas operativos de **móviles y tabletas** realizan las mismas funciones básicas que Windows, macOS o GNU/Linux: administran la memoria, ejecutan aplicaciones, gestionan archivos y controlan los dispositivos. Suelen estar especialmente preparados para **pantallas táctiles, batería, cámaras, conectividad y sensores**.
+
+#### 4.2.1. Android: un sistema basado en Linux
+
+**Android** es un sistema operativo desarrollado principalmente por Google y utilizado por fabricantes como Samsung, Motorola o Xiaomi. Emplea el **núcleo Linux**, aunque su interfaz y muchas de sus aplicaciones son distintas de las de una distribución GNU/Linux de escritorio.
+
+- **Dispositivos habituales:** teléfonos y tabletas de diferentes fabricantes; existen sistemas de la familia Android adaptados a televisores, relojes y coches.
+- **Aplicaciones:** normalmente se instalan desde Google Play, pero según el dispositivo y la configuración también pueden utilizarse otras tiendas o archivos de instalación.
+- **Personalización:** permite modificar numerosos aspectos de la interfaz, aunque los permisos dependen del fabricante.
+- **Código abierto:** la base **AOSP (Android Open Source Project)** es abierta; Google Play y determinados servicios o componentes de los fabricantes son propietarios.
+
+**¿Android en un portátil?** Existen proyectos como [Android-x86](https://www.android-x86.org/) y [Bliss OS](https://blissos.org/) para determinados ordenadores compatibles. Son alternativas especializadas, **no una instalación oficial de Android para cualquier portátil**, y pueden presentar problemas de controladores o soporte. Antes de probarlas, conviene comprobar sus versiones disponibles y su mantenimiento. **ChromeOS es otro sistema operativo**, aunque algunos Chromebooks pueden ejecutar aplicaciones Android.
+
+#### 4.2.2. iOS: el sistema del iPhone
+
+**iOS** es el sistema operativo de Apple para el **iPhone**. Está diseñado para trabajar con el hardware de este dispositivo y permite gestionar aplicaciones, llamadas, cámara, permisos, conexión a Internet y otras funciones.
+
+- **Integración:** Apple diseña tanto el sistema como los dispositivos en los que se ejecuta.
+- **Aplicaciones:** se distribuyen principalmente mediante la App Store; en algunos países, como los de la Unión Europea, existen otras opciones autorizadas por Apple bajo determinadas condiciones.
+- **Seguridad y privacidad:** incorpora permisos para acceder a la cámara, la ubicación o el micrófono, así como mecanismos de protección y actualizaciones.
+- **Personalización:** ofrece opciones de configuración, pero no permite instalarse libremente en un ordenador de otra marca.
+
+**¿iOS en un portátil? No.** Un MacBook utiliza **macOS**, no iOS.
+
+#### 4.2.3. iOS, iPadOS y macOS no son lo mismo
+
+Apple desarrolla varios sistemas relacionados, pero **cada uno está destinado a una familia de dispositivos**:
+
+| Sistema | Dispositivo habitual | ¿Puede instalarse normalmente en un portátil? |
+|---|---|---|
+| **iOS** | iPhone | No |
+| **iPadOS** | iPad | No; se utiliza en tabletas iPad |
+| **macOS** | MacBook, iMac, Mac mini y otros Mac compatibles | Sí, en portátiles Mac compatibles |
+
+**Importante:** iPadOS se separó de iOS como sistema identificado específicamente para las tabletas iPad. Los tres comparten tecnologías de Apple, pero tienen interfaces y características adaptadas a sus dispositivos. **macOS no es una distribución de Linux**, aunque, como Linux, pertenece a la tradición de los sistemas de tipo Unix.
+
+![Esquema de dispositivos de Apple con iOS, iPadOS y macOS](img/tema-02-ios-vs-macos.svg)
+
+<!-- IMAGEN: img/tema-02-ios-vs-macos.svg | TITULO: iOS, iPadOS y macOS: cada dispositivo tiene su sistema | POSICION: DESPUES -->
+
+#### 4.2.4. Android, iOS, Windows, GNU/Linux y macOS: comparación
+
+| Característica | Android | iOS | Windows | GNU/Linux | macOS |
+|---|---|---|---|---|---|
+| Uso principal | Móviles y tabletas | iPhone | PC y portátiles | PC, portátiles y servidores | Ordenadores Mac |
+| Fabricante o comunidad | Google y fabricantes | Apple | Microsoft | Comunidad y empresas | Apple |
+| ¿Código abierto? | Base AOSP, sí; otros componentes pueden ser cerrados | Propietario | Propietario | Generalmente libre y abierto | Propietario |
+| Instalación en portátiles | Solo variantes o proyectos compatibles | No | Sí, si el equipo es compatible | Sí, si el equipo es compatible | Sí, en Mac compatibles |
+| Interacción más común | Táctil | Táctil | Teclado, ratón y también táctil | Teclado, ratón y también táctil | Teclado, ratón y trackpad |
+
+**No confundas «fácil de personalizar» con «siempre seguro»**: todos necesitan actualizaciones y buenas prácticas. Tampoco todos los portátiles permiten instalar cualquier sistema; influyen el procesador, los controladores, la licencia y la compatibilidad.
+
+![Comparación visual de Android, iOS, Windows, GNU/Linux y macOS](img/tema-02-comparativa-so.svg)
+
+<!-- IMAGEN: img/tema-02-comparativa-so.svg | TITULO: Comparación de Android, iOS, Windows, GNU/Linux y macOS | POSICION: DESPUES -->
+
+#### 4.2.5. ¿Dónde podemos instalar cada sistema?
+
+- **Android:** principalmente móviles y tabletas; variantes de la familia Android en televisores, relojes y otros equipos. En determinados ordenadores, mediante proyectos específicos.
+- **iOS:** iPhone compatibles. **iPadOS:** tabletas iPad compatibles.
+- **Windows:** ordenadores de sobremesa, portátiles y otros equipos compatibles.
+- **GNU/Linux:** ordenadores, portátiles, servidores, Raspberry Pi y algunos sistemas especializados; la compatibilidad depende de la distribución.
+- **macOS:** ordenadores Mac compatibles, incluidos **MacBook** (portátiles), iMac y Mac mini.
+
+![Esquema de tipos de dispositivos y sistemas operativos](img/tema-02-so-tipos.svg)
+
+<!-- IMAGEN: img/tema-02-so-tipos.svg | TITULO: Relación entre sistemas operativos y dispositivos | POSICION: DESPUES -->
+
+**Comprueba que lo has entendido:** ¿qué sistema elegirías para un portátil antiguo? ¿Podrías instalar iOS en él? ¿Por qué un MacBook funciona con macOS y un iPhone con iOS?
+
+**Fuentes para ampliar:** [Android Open Source Project](https://source.android.com/docs/setup/about), [sistemas operativos de Apple](https://www.apple.com/es/os/), [instalación de Android-x86](https://www.android-x86.org/installhowto.html) y [estado actual de Bliss OS](https://blissos.org/status.html).
 
 ## 5. Cómo funciona un sistema operativo
 
@@ -195,6 +269,8 @@ Actualizar el sistema y sus aplicaciones corrige errores y vulnerabilidades. Con
 7. ¿Qué es una ISO y por qué no basta normalmente con copiarla como archivo a una memoria USB?
 8. ¿Qué permite hacer un sistema Live y qué limitaciones tiene?
 9. ¿Por qué es importante realizar una copia de seguridad antes de instalar un sistema operativo?
+10. ¿En qué se diferencian iOS, iPadOS y macOS?
+11. ¿Se puede instalar Android en cualquier portátil? ¿Por qué?
 
 ## 14. Glosario
 
@@ -209,6 +285,9 @@ Actualizar el sistema y sus aplicaciones corrige errores y vulnerabilidades. Con
 - **ISO:** archivo con una imagen de medio de instalación o arranque.
 - **USB Live:** memoria arrancable que permite iniciar un sistema sin instalarlo en el disco interno.
 - **UEFI:** firmware moderno que ayuda a iniciar el ordenador.
+- **AOSP:** proyecto de código abierto que proporciona la base de Android.
+- **iPadOS:** sistema operativo de Apple para sus tabletas iPad.
+- **macOS:** sistema operativo de los ordenadores Mac; distinto de iOS.
 - **Partición:** división lógica de un dispositivo de almacenamiento.
 
 
@@ -264,6 +343,6 @@ A veces **Windows deja de arrancar, pero los archivos siguen guardados en el dis
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.2.2
-- **Última actualización:** 21/11/2026
+- **Versión del contenido:** 1.3.0
+- **Última actualización:** 26/11/2026
 - **Estado:** Contenido aprobado y ampliable

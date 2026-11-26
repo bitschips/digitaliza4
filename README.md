@@ -28,6 +28,5 @@
 ### Tema 18. Participación y activismo digital
 ---
 
-**Referencia normativa:** [Currículo de Digitalización – Generalitat Valenciana](https://ceice.gva.es/documents/162640733/364069413/Digitalizaci%C3%B3n.pdf/af297d78-2e15-f455-e293-c10e51739666?t=1663324952645).
 
-> **Nota:** Los 18 temas son una propuesta de organización didáctica resumida de los cuatro bloques curriculares, no una numeración oficial establecida por la GVA.
+> **Nota:** Los 18 temas constituyen una propuesta de organización didáctica.

@@ -10,7 +10,7 @@ Este archivo recoge las decisiones de organización, preferencias y procedimient
 
 **Instrucción para asistentes, colaboradores y automatizaciones:** leer este archivo antes de crear, modificar, reorganizar o publicar contenidos. Aplicar sus reglas a todos los temas, respetando las peticiones nuevas y explícitas del profesor. Si una nueva decisión cambia estas normas, actualizar este mismo documento y su versión.
 
-Este repositorio reúne materiales de **Digitalización de 4.º de ESO de la Comunitat Valenciana (GVA)**, inicialmente organizados en 4 bloques y 18 temas. Los títulos son una **propuesta didáctica**, no una numeración oficial de la Generalitat.
+Este repositorio reúne materiales de **Digitalización**, organizados en 4 bloques y 18 temas como propuesta didáctica genérica y reutilizable. Evitar adscripciones territoriales, institucionales o normativas específicas en los materiales y utilizar únicamente el nombre de la materia en las cabeceras.
 
 La finalidad es mantener los contenidos **editables, reutilizables y preparados para generar presentaciones**.
 

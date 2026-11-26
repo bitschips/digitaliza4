@@ -1,4 +1,4 @@
-# Digitalización
+# Curso de Digitalización básica
 
 ## Bloque 1. Dispositivos digitales, sistemas operativos y comunicación
 

@@ -221,6 +221,29 @@ Un **archivo** almacena información; una **carpeta o directorio** permite organ
 
 Una **imagen ISO** es un archivo que contiene una imagen de un soporte de instalación o arranque. Se debe descargar desde la **web oficial**, seleccionar la versión y arquitectura compatibles, leer los requisitos y, cuando sea posible, verificar la suma de comprobación (SHA-256) publicada.
 
+### 9.1. Páginas oficiales para descargar imágenes ISO
+
+Para descargar un sistema operativo, **entra en la web oficial del proyecto**, elige una edición y una arquitectura compatibles con tu equipo (por ejemplo, **x86-64/amd64**) y busca la imagen **ISO**. Los enlaces siguientes llevan a las páginas oficiales de descarga, no a archivos de versión fija, para que sigan siendo útiles cuando se publiquen nuevas versiones.
+
+| Sistema operativo | Página oficial de descarga | ¿Por qué es interesante? |
+|---|---|---|
+| **Windows 11** | [Microsoft — Descargar Windows 11 (ISO)](https://www.microsoft.com/es-es/software-download/windows11) | Sistema habitual en muchos PC. En la web, buscar «Descargar una imagen de disco (archivo ISO) de Windows 11». Requiere hardware compatible y una licencia válida para su activación. |
+| **Debian GNU/Linux** | [Debian — Descargar e instalar](https://www.debian.org/distrib/) | Distribución estable, utilizada en ordenadores y servidores. Se puede elegir una ISO de instalación pequeña (*netinst*) o una imagen **Live** para probar el escritorio. |
+| **Linux Mint** | [Linux Mint — Descargas](https://www.linuxmint.com/download.php) | Adecuada para empezar a utilizar Linux; permite elegir escritorios como Cinnamon, MATE o Xfce según preferencias y requisitos. |
+| **Alpine Linux** | [Alpine Linux — Downloads](https://alpinelinux.org/downloads/) | Distribución ligera, frecuente en servidores y contenedores. Su instalación y uso suelen requerir más conocimientos; no es un escritorio gráfico completo listo para principiantes. |
+| **Ubuntu Desktop** | [Ubuntu — Download Desktop](https://ubuntu.com/download/desktop) | Distribución muy conocida para PC y portátiles; ofrece versiones **LTS** con soporte prolongado y una sesión de prueba desde USB. |
+| **Fedora Workstation** | [Fedora — Descargar Workstation](https://fedoraproject.org/workstation/download/) | Distribución de escritorio con tecnologías actuales; permite descargar una ISO **Live** y probarla antes de instalar. |
+
+**Importante para el alumnado:**
+
+1. **Descargar una ISO no instala el sistema operativo**: primero se guarda un archivo en el ordenador.
+2. Para utilizarla hay que crear un **USB arrancable** o cargarla en una **máquina virtual**. No basta con copiar el archivo ISO a una memoria USB común.
+3. Comprueba los **requisitos mínimos**, la arquitectura de la CPU y, si el proyecto la ofrece, la **suma SHA-256** de la descarga.
+4. Si únicamente quieres experimentar, usa un **sistema Live** o una máquina virtual en vez de modificar un disco con archivos personales.
+5. Descargar Windows 11 es distinto de disponer de una licencia válida para activarlo. Las distribuciones GNU/Linux de la tabla pueden descargarse gratuitamente.
+
+**Actividad breve de investigación:** elige dos sistemas de la tabla, localiza en sus webs oficiales el enlace a una ISO para PC de 64 bits, anota si existe modo Live y explica cuál probarías primero en un ordenador del aula. **No es necesario descargar ni instalar nada para completar esta actividad.**
+
 En una instalación normal, el asistente puede crear o modificar particiones y **borrar archivos**. Por eso no se debe instalar un sistema sobre un ordenador que contenga datos importantes sin autorización y copia de seguridad. Para practicar, se puede usar una máquina virtual o arrancar un USB en modo Live.
 
 ## 10. Crear un USB de arranque desde Linux y utilizarlo en modo Live
@@ -344,6 +367,6 @@ A veces **Windows deja de arrancar, pero los archivos siguen guardados en el dis
 
 ## Control de versiones
 
-- **Versión del contenido:** 1.3.0
+- **Versión del contenido:** 1.4.0
 - **Última actualización:** 26/11/2026
 - **Estado:** Contenido aprobado y ampliable

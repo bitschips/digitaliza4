@@ -1,6 +1,6 @@
 # Tema 2. Sistemas operativos
 
-**Materia:** Digitalización · 4.º ESO · Comunitat Valenciana  
+**Materia:** Digitalización  
 **Estado:** Contenido aprobado · material ampliable  
 **Fecha:** 26/11/2026
 
@@ -208,13 +208,13 @@ Esta tabla reúne en un solo lugar las distribuciones estudiadas y los **enlaces
 | **Alpine Linux** | Distribución minimalista para servidores, contenedores y proyectos técnicos. | Gratuita y muy ligera en configuraciones mínimas, pero no es un escritorio listo para principiantes. | [Alpine Linux — Downloads](https://alpinelinux.org/downloads/) |
 | **Ubuntu Desktop** | Ordenadores personales y portátiles; versiones LTS con soporte prolongado. | Descarga gratuita; comprobar los requisitos de la edición y la arquitectura. | [Ubuntu — Download Desktop](https://ubuntu.com/download/desktop) |
 | **Fedora Workstation** | Escritorio moderno con tecnologías actuales; permite probar el sistema en modo Live. | Descarga gratuita; comprobar requisitos del equipo. | [Fedora — Descargar Workstation](https://fedoraproject.org/workstation/download/) |
-| **LliureX** | Distribución educativa de la Comunitat Valenciana, adaptada a centros y aulas. | Descarga gratuita; consultar los requisitos y las versiones disponibles. | [LliureX — Portal oficial](https://portal.edu.gva.es/lliurex/) |
+| **LliureX** | Distribución Linux educativa, adaptada a centros y aulas. | Descarga gratuita; consultar los requisitos y las versiones disponibles. | LliureX (distribución educativa) |
 | **Red Hat Enterprise Linux (RHEL)** | Servidores y empresas con necesidades de administración y soporte. | Distribución comercial con suscripciones; existen modalidades de acceso gratuito para usos específicos. | [Red Hat — Información y descarga](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux) |
 | **Windows 11** | PC, portátiles, aplicaciones comerciales y videojuegos. | La ISO se puede descargar desde Microsoft; para utilizarlo y activarlo se necesita una licencia válida y hardware compatible. | [Microsoft — Descargar Windows 11 (ISO)](https://www.microsoft.com/es-es/software-download/windows11) |
 
 **¿Cuál elegir según el equipo?**
 
-- **Primer contacto con Linux:** Linux Mint o Ubuntu; en centros valencianos, también LliureX si el equipo es compatible.
+- **Primer contacto con Linux:** Linux Mint o Ubuntu; también LliureX si el equipo es compatible.
 - **Ordenador antiguo:** Mint Xfce o Debian con un escritorio ligero, comprobando siempre la RAM y los controladores.
 - **Servidor o proyecto técnico:** Debian o Alpine; RHEL si se requiere soporte empresarial.
 - **PC con Windows:** Windows 11 solo si cumple sus requisitos; su ISO se descarga desde la web de Microsoft.
